@@ -9,14 +9,42 @@ ist ein Beispiel für die Relaxation.
 \subsection{Relaxationsgleichung}
 \label{subsec:Die Relaxationsgleichung}
 
+Die allgemeine Relaxationsgleichung besteht aus der beschränkten Größe A(t), der Proportionalitätsonstante c < 0 
+und den konstanten
+Werten A(0) und A($\infty$).
+c variiert je nach Relaxationsvorgang.
+
+Die Änderungsrate von A wird als proportional zur Auslenkung angenommen:
+
+\begin{equation} \label{eq:Relaxation}
+
+\frac{dA}{dt} = c[A(t)-A(\infty)]
+    
+\end{equation}
+
+diese Gleichung wird dann mit $dt$ multipliziert und dann über das Intervall $[0; t]$ integriert. 
+Es ergibt sich:
+
+\begin{equation}
+    
+ln\frac{A(t)-A(\infty)}{A(0)-A(\infty)} = ct \\
+
+\Longleftrightarrow\qquad A(t) = A(\infty) + [A(0)-A(\infty)] \cdot exp(ct)
+
+\end{equation}
+
+
 \subsection{Auf- und Entladevorgänge am Kondensator}
 \label{subsec:Auf- und Entladevorgänge am Kondensator}
+
+Die klassische Elektrodynamik bringt die grundlegenden Beziehungen $I = \frac{U}{R}$ und $U_C = \frac{Q}{C}$ 
+hervor.
 
 \subsection{Auf- und Entladevorgänge bei Wechselspannung}
 \label{subsec:Auf- und Entladevorgänge bei Wechselspannung}
 
-Die angelegte Wechselspannung $U(t) = U_0 cos(\omega t)$ lässt sich als periodische Anregung beschreiben, wie sie auch
-aus der Mechanik bekannt ist.
+Die angelegte Wechselspannung $U(t) = U_0 cos(\omega t)$ lässt sich als periodische Anregung beschreiben, 
+wie sie auch aus der Mechanik bekannt ist.
 
 
 
