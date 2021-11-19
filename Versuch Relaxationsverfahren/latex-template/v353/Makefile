@@ -7,8 +7,20 @@ build/plot.pdf: plot.py ../matplotlibrc ../header-matplotlib.tex | build
 	# and set the matplotlibrc
 	TEXINPUTS=$$(pwd)/..: MATPLOTLIBRC=../matplotlibrc python plot.py
 
+build/plot2.pdf: plot2.py ../matplotlibrc ../header-matplotlib.tex | build
+	# so that matplotlib can find the tex header when running
+	# LaTeX in the tmp directory
+	# and set the matplotlibrc
+	TEXINPUTS=$$(pwd)/..: MATPLOTLIBRC=../matplotlibrc python plot2.py
+
+build/plot3.pdf: plot3.py ../matplotlibrc ../header-matplotlib.tex | build
+	# so that matplotlib can find the tex header when running
+	# LaTeX in the tmp directory
+	# and set the matplotlibrc
+	TEXINPUTS=$$(pwd)/..: MATPLOTLIBRC=../matplotlibrc python plot3.py
+
 # hier weitere Abhängigkeiten für build/vXXX.pdf deklarieren:
-build/v353.pdf: build/plot.pdf
+build/v353.pdf: build/plot.pdf build/plot2.pdf build/plot3.pdf
 
 build/v353.pdf: FORCE | build
 	# to find header and bib files in the main directory
