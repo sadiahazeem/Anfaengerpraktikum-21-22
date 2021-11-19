@@ -18,9 +18,7 @@ Die Änderungsrate von A wird als proportional zur Auslenkung angenommen:
 
 \begin{equation} 
     \label{Rel_allg}
-
 \frac{dA}{dt} = c[A(t)-A(\infty)]
-    
 \end{equation}
 
 diese Gleichung wird dann mit $dt$ multipliziert und dann über das Intervall $[0; t]$ integriert. 
@@ -28,11 +26,8 @@ Es ergibt sich:
 
 \begin{equation} 
     \label{Rel_RC}
-    
 ln\frac{A(t)-A(\infty)}{A(0)-A(\infty)} = ct \\
-
 \Longleftrightarrow\qquad A(t) = A(\infty) + [A(0)-A(\infty)] \cdot exp(ct)
-
 \end{equation}
 
 
@@ -42,14 +37,12 @@ ln\frac{A(t)-A(\infty)}{A(0)-A(\infty)} = ct \\
 Die klassische Elektrodynamik bringt die grundlegenden Beziehungen $I = \frac{U}{R}$ und $U_C = \frac{Q}{C}$ 
 hervor.
 Daraus lässt sich die Änderungsrate $\frac{dQ}{dt} = -\frac{1}{RC}Q(t)$ der Kondensatorladung bestimmen. 
-Unter der Randbedingung, dass bei einem Entladeprozess Q(\infty) = 0 gelten muss, ergibt sich nach den gleichen
+Unter der Randbedingung, dass bei einem Entladeprozess $Q(\infty) = 0$ gelten muss, ergibt sich nach den gleichen
 Umformungen, wie bei der allgemeinen Relaxationsgleichung ~\eqref{Rel_allg}
 
 \begin{equation}
     \label{}
-    
 Q(t) = Q(0)\cdot exp(-\frac{t}{RC})
-
 \end{equation}
 
 $\frac{1}{RC}$ ist hier die Zeitkonstante (wie oben c).
@@ -76,9 +69,7 @@ Bei geeigneten Frequenzen $\omega >> RC$ und Spannungen $|U_C| >> |U_G|$ erhält
 
 \begin{equation}
     \label{integrator}
-
     U_C = \frac{1}{RC} \int_{0}^{t} U(\tau) d\tau
-
 \end{equation}
 
 
