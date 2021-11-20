@@ -12,7 +12,7 @@ def g(t):
     return np.arctan(t*0.0069641)
 
 parameters, pcov = curve_fit(f, x, y, p0=(1,0.1))
-print(parameters)
+print(parameters, np.sqrt(np.diag(pcov)), sep='\n')
 
 t_plot = np.linspace(-0.1, 52, 1000)*1e3
 
@@ -24,7 +24,7 @@ plt.xscale('log')
 plt.xlim(100, 52*1e3)
 plt.ylim(0, 3)
 plt.xlabel(r'$f \mathbin{/} \unit{\hertz}$')
-plt.ylabel(r'$\phi \mathbin{/} \unit{\radian}$')
+plt.ylabel(r'$\varphi \mathbin{/} \unit{\radian}$')
 plt.legend(loc='best')
 plt.tight_layout(pad=0, h_pad=1.08, w_pad=1.08)
 plt.savefig('build/plot3.pdf')

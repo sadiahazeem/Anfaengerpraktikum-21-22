@@ -14,6 +14,6 @@ ax.plot(x, y, 'x')
 ax.plot(phi, f(phi))
 ax.set_rmax(1.05)
 ax.set_rlabel_position(270)
-ax.grid(True)
+ax.grid(True, linewidth=0.5)
 
 plt.savefig('build/plot4.pdf')
