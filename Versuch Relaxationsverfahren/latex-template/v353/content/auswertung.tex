@@ -1,6 +1,6 @@
 \section{Auswertung}
 \label{sec:Auswertung}
-Es wurden aus \autoref{} die Werte in \autoref{tab:DatenEntladung} entnommen und nach Gleichung \eqref{} folgt 
+Es wurden aus \autoref{abb:Entladung} die Werte in \autoref{tab:DatenEntladung} entnommen und nach Gleichung \eqref{RelQ} folgt 
 für die lineare Regression:
 \begin{equation}
   \label{eqn:linRegress}
@@ -22,7 +22,7 @@ Es ergibt sich aus der linearen Regression in \autoref{fig:plot}:
 \end{align*}
 %(-2564.035208002769, 37.56001783858995, 0.03087285853896417, 0.02142147040602549)
 Anschließend wurde die Zeitkonstante $RC$ mit den Wertepaaren der Relativamplitude $\frac{U_c}{U_0}$ und der Generatorfrequenz $f$
-aus \autoref{tab:DatenB} mithilfe der folgende Ausgleichsrechnung bestimmt nach \eqref{} bestimmt:
+aus \autoref{tab:DatenB} mithilfe der folgende Ausgleichsrechnung bestimmt:
 \begin{equation}
   \label{eqn:Ausgleichsrechnung1}
   \frac{U_c}{U_0} = e^{(-a\cdot f + b)}.
@@ -31,7 +31,7 @@ Wobei bei dieser Ausgleichsrechnung die Zeitkonstante $RC = a$ ist.
 \begin{figure}
   \centering
   \includegraphics{plot2.pdf}
-  \caption{Hier sind die Wertepaare aus \autoref{tab:DatenB} die Ausgleichsrechnung nach \eqref{eqn:Ausgleichsrechnung1} und die Originalfunktion nach eqref{} mit dem berechneten $RC$ in einem halblogarithmischen Diagramm aufgetragen.}
+  \caption{Hier sind die Wertepaare aus \autoref{tab:DatenB} die Ausgleichsrechnung nach \eqref{eqn:Ausgleichsrechnung1} und die Originalfunktion nach \eqref{eqn:bezAU} mit dem berechneten $RC$ in einem halblogarithmischen Diagramm aufgetragen.}
   \label{fig:plot2}
 \end{figure}
 
@@ -43,7 +43,7 @@ Es ergeben sich die Parameter a und b der Ausgleichsrechnung zu:
 
 Die dritte Methode die Zeitkonstante $RC$ zu bestimmen, basiert auf einer Ausgleichrechung zu den Wertepaaren der Phasenverschiebung $\varphi$ 
 und der Generatorfrequenz $f$ aus \autoref{tab:DatenC}.
-Die Ausgleichsrechnung ergibt sich in diesem Fall nach \eqref{} zu:
+Die Ausgleichsrechnung ergibt sich in diesem Fall nach \eqref{PhiArctan} zu:
 \begin{equation}
   \label{eqn:Ausgleichsrechnung2}
   \symup{\varphi} = a\cdot\arctan(b\cdot t).
@@ -52,7 +52,7 @@ Wobei hier die Zeitkonstante $RC = b$ ist.
 \begin{figure}
   \centering
   \includegraphics{plot3.pdf}
-  \caption{Hier sind die Wertepaare aus \autoref{tab:DatenC}, die Ausgleichsrechnung nach \eqref{eqn:Ausgleichsrechnung2} und die Originalfunktion nach \eqref{} mit eingesetztem $RC$ in einem halblogarithmischem Diagramm aufgetragen.}
+  \caption{Hier sind die Wertepaare aus \autoref{tab:DatenC}, die Ausgleichsrechnung nach \eqref{eqn:Ausgleichsrechnung2} und die Originalfunktion nach \eqref{PhiArctan} mit eingesetztem $RC$ in einem halblogarithmischem Diagramm aufgetragen.}
   \label{fig:plot3}
 \end{figure}
 Bei dieser Ausgleichsrechnung ergeben sich die Parameter a und b zu:
@@ -61,7 +61,7 @@ Bei dieser Ausgleichsrechnung ergeben sich die Parameter a und b zu:
   b &=(6.9641\pm 2.0824) \unit{\milli\second} = RC \\
 \end{align*}
 
-Die Abhängigkeit der Relativamplitude $\frac{U_c}{U_0}$ von der Phase $\varphi$ ergibt sich nach \eqref{} zu:
+Die Abhängigkeit der Relativamplitude $\frac{U_c}{U_0}$ von der Phase $\varphi$ ergibt sich zu:
 \begin{equation*}
   \frac{U_c}{U_0} = \cos\left(\varphi\right).
 \end{equation*}
