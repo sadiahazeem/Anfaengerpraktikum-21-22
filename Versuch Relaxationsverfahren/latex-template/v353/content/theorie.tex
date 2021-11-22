@@ -1,4 +1,80 @@
 \section{Theorie}
 \label{sec:Theorie}
 
+Die Relaxation eines Systems ist der Übergang aus dem ausgelenkten in den Ausgangszustand.
+In diesem Versuch ist das zu untersuchende System ein RC-Schaltkreis.
+
+Die Entladung des Kondensators durch einen Strom, der durch den Widerstand fließt, 
+ist ein Beispiel für die Relaxation.
+
+\subsection{Relaxationsgleichung}
+\label{subsec:Die Relaxationsgleichung}
+
+Die allgemeine Relaxationsgleichung besteht aus der beschränkten Größe A(t), der Proportionalitätsonstante c < 0 
+und den konstanten
+Werten A(0) und A($\infty$).
+
+c variiert je nach Relaxationsvorgang und gibt Auskunft über die Geschwindigkeit des Entladeprozesses.
+
+Die Änderungsrate von A wird als proportional zur Auslenkung angenommen:
+
+\begin{equation} 
+    \label{Rel_allg}
+\frac{dA}{dt} = c[A(t)-A(\infty)]
+\end{equation}
+
+diese Gleichung wird dann mit $dt$ multipliziert und dann über das Intervall $[0; t]$ integriert. 
+Es ergibt sich:
+
+\begin{equation} 
+    \label{Rel_RC}
+ln\frac{A(t)-A(\infty)}{A(0)-A(\infty)} = ct \\
+\Longleftrightarrow\qquad A(t) = A(\infty) + [A(0)-A(\infty)] \cdot exp(ct)
+\end{equation}
+
+
+\subsection{Auf- und Entladevorgaenge am Kondensator}
+\label{subsec:Entladevorgaenge am Kondensator}
+
+Die klassische Elektrodynamik bringt die grundlegenden Beziehungen $I = \frac{U}{R}$ und $U_C = \frac{Q}{C}$ 
+hervor.
+
+Daraus lässt sich die Änderungsrate $\frac{dQ}{dt} = -\frac{1}{RC}Q(t)$ der Kondensatorladung bestimmen. 
+
+Unter der Randbedingung, dass bei einem Entladeprozess $Q(\infty) = 0$ gelten muss, ergibt sich nach den gleichen
+Umformungen, wie bei der allgemeinen Relaxationsgleichung ~\eqref{Rel_allg}
+
+\begin{equation}
+    \label{}
+Q(t) = Q(0)\cdot exp(-\frac{t}{RC})
+\end{equation}
+
+$\frac{1}{RC}$ ist hier die Zeitkonstante (wie oben c).
+
+
+\subsection{Auf- und Entladevorgaenge bei Wechselspannung}
+\label{subsec:Entladevorgaenge bei Wechselspannung}
+
+Die angelegte Wechselspannung $U(t) = U_0 cos(\omega t)$ lässt sich als periodische Anregung beschreiben, 
+wie sie auch aus der Mechanik bekannt ist.
+
+Zwischen $U_G$ und $U_C$ bildet sich der Phasenversatz $\varphi(\omega)$, sodass $U_C$ wie folgt beschrieben werden
+kann:
+
+\begin{equation}
+    U_C = A(\omega) \cdot cos(\omega t + \varphi(\omega))
+\end{equation}
+
+
+\subsection{Integration im RC-Kreis}
+\label{subsec:Integration im RC-Kreis}
+
+Bei geeigneten Frequenzen $\omega >> RC$ und Spannungen $|U_C| >> |U_G|$ erhält man durch die integrierende Funktion des RC-Gliedes 
+
+\begin{equation}
+    \label{integrator}
+    U_C = \frac{1}{RC} \int_{0}^{t} U(\tau) d\tau
+\end{equation}
+
+
 \cite{sample}
