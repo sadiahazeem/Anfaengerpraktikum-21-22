@@ -1,7 +1,8 @@
 \section{Auswertung}
 \label{sec:Auswertung}
-Es wurden aus \autoref{} die Werte in \autoref{tab:DatenEntladung} entnommen und nach Gleichung \eqref{} folgt 
-für die lineare Regression:
+Es wurden aus \autoref{} die Werte in \autoref{tab:DatenEntladung} entnommen. 
+
+Nach Gleichung \eqref{} folgt für die lineare Regression:
 \begin{equation}
   \label{eqn:linRegress}
     \ln\left(\frac{U_c}{U_0}\right)=-\frac{1}{RC}\cdot t + b.
@@ -22,7 +23,7 @@ Es ergibt sich aus der linearen Regression in \autoref{fig:plot}:
 \end{align*}
 %(-2564.035208002769, 37.56001783858995, 0.03087285853896417, 0.02142147040602549)
 Anschließend wurde die Zeitkonstante $RC$ mit den Wertepaaren der Relativamplitude $\frac{U_c}{U_0}$ und der Generatorfrequenz $f$
-aus \autoref{tab:DatenB} mithilfe der folgende Ausgleichsrechnung bestimmt nach \eqref{} bestimmt:
+aus \autoref{tab:DatenB} mithilfe der folgenden Ausgleichsrechnung nach \eqref{} bestimmt:
 \begin{equation}
   \label{eqn:Ausgleichsrechnung1}
   \frac{U_c}{U_0} = e^{(-a\cdot f + b)}.
@@ -41,9 +42,11 @@ Es ergeben sich die Parameter a und b der Ausgleichsrechnung zu:
   b &= 0.99545\pm 0.06030\\
 \end{align*}
 
-Die dritte Methode die Zeitkonstante $RC$ zu bestimmen, basiert auf einer Ausgleichrechung zu den Wertepaaren der Phasenverschiebung $\varphi$ 
+Die dritte Methode, die Zeitkonstante $RC$ zu bestimmen, basiert auf einer Ausgleichsrechung zu den Wertepaaren der Phasenverschiebung $\varphi$ 
 und der Generatorfrequenz $f$ aus \autoref{tab:DatenC}.
-Die Ausgleichsrechnung ergibt sich in diesem Fall nach \eqref{} zu:
+
+
+Diese Ausgleichsrechnung ergibt sich in diesem Fall nach \eqref{} zu:
 \begin{equation}
   \label{eqn:Ausgleichsrechnung2}
   \symup{\varphi} = a\cdot\arctan(b\cdot t).
@@ -69,7 +72,7 @@ Die Abhängigkeit der Relativamplitude $\frac{U_c}{U_0}$ von der Phase $\varphi$
 \begin{figure}
   \centering
   \includegraphics{plot4.pdf}
-  \caption{Hier wurde die erwähnte Abhängigkeit der Relativamplitude von der Phase, sowie einige Wertepaare aus \autoref{tab:DatenD} in ein polar Diagramm eingetragen.}
+  \caption{Hier wurde die erwähnte Abhängigkeit der Relativamplitude von der Phase, sowie einige Wertepaare aus \autoref{tab:DatenD} in ein Polardiagramm eingetragen.}
   \label{fig:plot4}
 \end{figure}
 

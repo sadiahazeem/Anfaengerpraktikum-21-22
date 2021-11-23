@@ -1,16 +1,28 @@
 \section{Diskussion}
 \label{sec:Diskussion}
-Bei der ersten Methode die Zeitkonstante $RC$ über den Entladungsprozesses des Kondensators zu bestimmen fällt sofort im vergleich zu
-den anderen bestimmten Werten von $RC$ auf, dass sich dieser um ein Zehnerpotenz von den anderen unterscheidet. Diese differenz kann darauf
-zurückgeführt werden, dass bei der 1. Methode am Funktionsgenerator der TTL output und nicht wie dann bei allen anderen der $50\unit{\ohm}$
-output verwendet wurde. Außerdem bringt das ablesen der Werte des Entladungsprozesses aus einem Bild eine zusätzliche unsicherheit mit sich.
-Die in \autoref{abb:Entladung} erhaltene Kurve entspricht der theoretischen Erwartung eines exponentiellen abfalls nach \eqref{}.
-Die Werte die sich für die Zeitkonstante bei den Methoden 2 und 3 ergeben liegen beide im selben Bereich, wobei bei Methode bei den Messwerten
-in \autoref{fig:plot2} auffällt das diese vor allem für niedrigere Frequenzen immer mehr von der Originalfunktion abweichen, aber bei höheren dieser sehr nahe sind.\\
+Bei der ersten Methode, die Zeitkonstante $RC$ über den Entladungsprozesses des Kondensators zu bestimmen, fällt sofort im Vergleich zu
+den anderen Messwerten zu $RC$ auf, dass sich dieser um eine Zehnerpotenz von den anderen unterscheidet. 
+
+Diese Differenz kann darauf zurückgeführt werden, dass bei der ersten Methode am Funktionsgenerator der TTL-Output, und nicht, wie dann bei allen anderen, der $50\unit{\ohm}$-Output verwendet wurde. 
+
+Außerdem bringt das Ablesen der Werte des Entladungsprozesses aus einem Bild eine zusätzliche Unsicherheit mit sich.
+
+Die in \autoref{abb:Entladung} erhaltene Kurve entspricht der theoretischen Erwartung eines exponentiellen Abfalls nach \eqref{}.
+
+Die Werte, die sich für die Zeitkonstante bei den Methoden 2 und 3 ergeben, liegen beide im selben Bereich, wobei bei Methode ?? bei den Messwerten
+in \autoref{fig:plot2} auffällt, dass diese vor allem für niedrigere Frequenzen immer weiter von der Originalfunktion abweichen, aber bei höheren dieser sehr nahe sind.\\
 HIER NOCH ABWEICHUNG FÜR KLEINE F ERKLÄREN!!\\
-Beim Plot für Methode 3 ist nur die Abweichung von der Originalfunktion und der Ausgleichsfunktion für große f auffällig was allerdings auf ein verstellen der TIME/DIV
-für große f für eine bessere lesbarkeit auf dem Oszilloskopbildschirm zurückgeführt werden kann. Dieselbe Abweichung zeigt sich ebenfalls im Polarplot, wo dennoch alle
+Beim Plot für Methode 3 ist nur die Abweichung von der Originalfunktion und der Ausgleichsfunktion für große Frequenzen auffällig, wie es allerdings auf ein Modulieren der TIME/DIV
+für große Frequenzen zwecks besserer Lesbarkeit auf dem Oszilloskopbildschirm zurückgeführt werden kann. 
+
+Dieselbe Abweichung zeigt sich ebenfalls im Polarplot, wo dennoch alle
 darin aufgetragen Winkel wie zu erwarten zwischen $0$ und $\frac{\pi}{2}$ liegen.
-Ein vergleich der bestimmten Zeitkonstanten mit dem wahren Wert kann nicht durchgeführt werden, da die dafür erforderlichen größen $C$ und $R$ im Tiefpass nicht angegeben waren
-oder gemessen werden konnten.\\
-Integrator erklären!!
+
+Ein Vergleich der bestimmten Zeitkonstanten mit dem korrekten Wert kann nicht durchgeführt werden, da die dafür erforderlichen Größen Kapazität $C$ und Widerstand $R$ des Tiefpassfilters
+ nicht auf dem Gerät angegeben waren oder gemessen werden konnten.\\
+
+Die integrierende Eigenschaft des RC-Tiefpasses bei Frequenzen, bei denen $RC/T >> 1$ gilt, kommt daher, dass 
+die über Widerstand und Kondensator abfallende Spannung einen Strom bedingt, der wiederum vom Kondensator gespeichert
+beziehungsweise die Elektronen des Stroms summiert. Diese Elektronen sorgen selber für eine sich aufbauende Spannung
+über den Kondensator, welche gleichzeitig auch die Ausgangsspannung bildet. So kommt es durch die Summation des
+Stromes, der sich proportional zur Eingangsspannung verhält zu einer Integration der Eingangsspannung.
