@@ -1,15 +1,52 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 
-Zuerst wurden die Dichten $\rho_{klein}$ und $\rho_{gross}$ der kleinen und großen Kugeln bestimmt. Dazu wurden Massen
-$m_{klein} = 4.453\unit{\gram}$ und $m_{gross} = 4.953 \unit{\gram}$, sowie deren gemessener Durchmesser verwendet und
+Zuerst wurden die Dichten $\rho_{kl}$ und $\rho_{gr}$ der kleinen und großen Kugeln bestimmt. Dazu wurden Massen
+$m_{kl} = 4.453\unit{\gram}$ und $m_{gr} = 4.953 \unit{\gram}$, sowie deren gemessener Durchmesser verwendet und
 damit erst die Volumina mit $V = \frac{1}{6}\pi\left(d\right)^3$ berechnet:
 \begin{align*}
-  V_{klein} &= \frac{1}{6}\pi\left(1.55\unit{\centi\meter}\right)^3 \approx 1.9498\unit{\cubic\centi\meter}\\
-  V_{gross} &= \frac{1}{6}\pi\left(1.58\unit{\centi\meter}\right)^3 \approx 2.0652\unit{\cubic\centi\meter}.
+  V_{kl} &= \frac{1}{6}\pi\left(1.55\unit{\centi\meter}\right)^3 \approx 1.9498\unit{\cubic\centi\meter}\\
+  V_{gr} &= \frac{1}{6}\pi\left(1.58\unit{\centi\meter}\right)^3 \approx 2.0652\unit{\cubic\centi\meter}.
 \end{align*}
 Anschließend wurden mit der Formel: $\rho = \frac{m}{V}$ die Dichten der Kugeln berechnet:
 \begin{align*}
-  \rho_{klein} &= \frac{m_{klein}}{V_{klein}} \approx 2.2838\unit{\gram\per\cubic\centi\meter}\\
-  \rho_{gross} &= \frac{m_{gross}}{V_{gross}} \approx 2.3983\unit{\gram\per\cubic\centi\meter}
+  \rho_{kl} &= \frac{m_{kl}}{V_{kl}} \approx 2.2838\unit{\gram\per\cubic\centi\meter}\\
+  \rho_{gr} &= \frac{m_{gr}}{V_{gr}} \approx 2.3983\unit{\gram\per\cubic\centi\meter}
+\end{align*}
+Dann wurden der Mittelwert und die Standardabweichungen der Fallzeiten der Kugeln mithilfe der folgenden Fehlerformeln berechnet:
+\begin{align*}
+  \bar{x} &= \frac{1}{N}\sum_{k=1}^{N} x_k\\
+  \symup{\Delta}\bar{x} &= \sqrt{\frac{1}{N\left(N-1\right)}\sum_{k=1}^{N}\left(x_k-\bar{x}\right)^2} = \sqrt{\bar{x^2}-\bar{x}^2}.
+\end{align*}
+Für die kleine Kugel ergibt sich:
+\begin{align*}
+  \bar{t}_{hin} &=6.197\unit{\second}\\
+  \bar{t}_{zur} &=6.324\unit{\second}\\
+  \symup{\Delta}\bar{t}_{hin} &= 0.256\unit{\second}\\
+  \symup{\Delta}\bar{t}_{zur} &= 0.208\unit{\second}.
+\end{align*}
+Für die große Kugel ergibt sich:
+\begin{align*}
+  \bar{t}_{hin} &=40.984\unit{\second}\\
+  \bar{t}_{zur} &=40.906\unit{\second}\\
+  \symup{\Delta}\bar{t}_{hin} &= 0.184\unit{\second}\\
+  \symup{\Delta}\bar{t}_{zur} &= 0.510\unit{\second}.
+\end{align*}
+Nun wurde mit \eqref{} die dynamische Viskosität mit der Apperatkonstante $K_{kl} = 0.0764\unit{\milli\pascal\cubic\centi\meter\per\gram}$
+der kleinen Kugel die dynamische Viskosität berechnet, wobei die angegebene Apperatkonstante sich auf die Strecke
+$\symup{\Delta}s = 100\unit{\milli\meter}$ bezieht, aber die Messdaten auf einer Strecke von $\symup{\Delta}s = 50\unit{\milli\meter}$ genommen wurden,
+müssen die verwendeten Zeiten verdoppelt werden, hier also mit $t_{hin} = (12.394\pm 0.512)\unit{\second}$ und $t_{zur} = (12.648\pm 0.416)\unit{\second}$:
+\begin{align*}
+  \eta_{hin} &= (1.32575\pm 0.05477)\unit{\milli\pascal\second}\\
+  \eta_{zur} &= (1.35292\pm 0.04450)\unit{\milli\pascal\second}
+\end{align*}
+Die Fehlerfortpflanzung wurde mit der Gauß´schen Fehlerfortpflanzung berechnet:
+\begin{equation*}
+  \symup{\Delta}f = \sqrt{\left(\frac{\partial f}{\partial x}\symup{\Delta}x\right)^2 + \left(\frac{\partial f}{\partial y}\symup{\Delta}y\right)^2 +\ldots}
+\end{equation*}
+Es wurde Gleichung \eqref{} nach $K$ umgeformt und mit dem nun bekannten $\eta$ kann $K_{gr}$ mit
+den Zeiten für die große Kugel $t_{hin} = (81.968\pm 0.367)\unit{\second}$ und $t_{zur} = (81.812\pm 1.019)\unit{\second}$ berechnet werden:
+\begin{align*}
+  Hin : K_{gr} &= \frac{\eta_{hin}}{(\rho_K-\rho_{Fl})t_{hin}} = (11.5521\pm 0.4800)\unit{\micro\pascal\cubic\centi\meter\per\gram}\\
+  Zur : K_{gr} &= \frac{\eta_{zur}}{(\rho_K-\rho_{Fl})t_{zur}} = (11.8113\pm 0.4154)\unit{\micro\pascal\cubic\centi\meter\per\gram}
 \end{align*}
