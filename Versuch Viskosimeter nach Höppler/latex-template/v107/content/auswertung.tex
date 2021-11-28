@@ -1,6 +1,6 @@
 \section{Auswertung}
 \label{sec:Auswertung}
-
+\subsection{Volumina und Dichten}
 Zuerst wurden die Dichten $\rho_{kl}$ und $\rho_{gr}$ der kleinen und großen Kugeln bestimmt. Dazu wurden Massen
 $m_{kl} = 4.453\unit{\gram}$ und $m_{gr} = 4.953 \unit{\gram}$, sowie deren gemessener Durchmesser verwendet und
 damit erst die Volumina mit $V = \frac{1}{6}\pi\left(d\right)^3$ berechnet:
@@ -13,46 +13,46 @@ Anschließend wurden mit der Formel: $\rho = \frac{m}{V}$ die Dichten der Kugeln
   \rho_{kl} &= \frac{m_{kl}}{V_{kl}} \approx 2.2838\unit{\gram\per\cubic\centi\meter}\\
   \rho_{gr} &= \frac{m_{gr}}{V_{gr}} \approx 2.3983\unit{\gram\per\cubic\centi\meter}
 \end{align*}
-Dann wurden der Mittelwert und die Standardabweichungen der Fallzeiten der Kugeln mithilfe der folgenden Fehlerformeln berechnet:
+\subsection{Fehlerformeln}
 \begin{align*}
   \bar{x} &= \frac{1}{N}\sum_{k=1}^{N} x_k\\
   \symup{\Delta}\bar{x} &= \sqrt{\frac{1}{N\left(N-1\right)}\sum_{k=1}^{N}\left(x_k-\bar{x}\right)^2} = \sqrt{\bar{x^2}-\bar{x}^2}.
 \end{align*}
+Für die Berechnung der Fehlerfortpflanzung wurde die Gauß´schen Fehlerfortpflanzung verwendet:
+\begin{equation*}
+  \symup{\Delta}f = \sqrt{\left(\frac{\partial f}{\partial x}\symup{\Delta}x\right)^2 + \left(\frac{\partial f}{\partial y}\symup{\Delta}y\right)^2 +\ldots}
+\end{equation*}
+\subsection{Bestimmung der Apperatkonstanten}
+Dann wurden der Mittelwert und die Standardabweichungen der Fallzeiten der Kugeln berechnet.\\
 Für die kleine Kugel ergibt sich:
 \begin{align*}
-  \bar{t}_{hin} &=6.197\unit{\second}\\
-  \bar{t}_{zur} &=6.324\unit{\second}\\
-  \symup{\Delta}\bar{t}_{hin} &= 0.256\unit{\second}\\
-  \symup{\Delta}\bar{t}_{zur} &= 0.208\unit{\second}.
+  \bar{t}_{hin} &=(6.197\pm 0.256)\unit{\second}\\
+  \bar{t}_{zur} &=(6.324\pm 0.208)\unit{\second}.
 \end{align*}
 Für die große Kugel ergibt sich:
 \begin{align*}
-  \bar{t}_{hin} &=40.984\unit{\second}\\
-  \bar{t}_{zur} &=40.906\unit{\second}\\
-  \symup{\Delta}\bar{t}_{hin} &= 0.184\unit{\second}\\
-  \symup{\Delta}\bar{t}_{zur} &= 0.510\unit{\second}.
+  \bar{t}_{hin} &=(40.984\pm 0.184)\unit{\second}\\
+  \bar{t}_{zur} &=(40.906\pm 0.510)\unit{\second}.
 \end{align*}
 Nun wurde mit \eqref{} und der Apperatkonstante $K_{kl} = 0.0764\unit{\milli\pascal\cubic\centi\meter\per\gram}$
-der kleinen Kugel die dynamische Viskosität berechnet, wobei die angegebene Apperatkonstante sich auf die Strecke
+der kleinen Kugel die dynamische Viskosität $\eta$ berechnet, wobei die angegebene Apperatkonstante sich auf die Strecke
 $\symup{\Delta}s = 100\unit{\milli\meter}$ bezieht, aber die Messdaten auf einer Strecke von $\symup{\Delta}s = 50\unit{\milli\meter}$ genommen wurden,
-müssen die verwendeten Zeiten verdoppelt werden, hier also mit $t_{hin} = (12.394\pm 0.512)\unit{\second}$ und $t_{zur} = (12.648\pm 0.416)\unit{\second}$:
+müssen die gemessenen Zeiten verdoppelt werden, hier also mit $t_{hin} = (12.394\pm 0.512)\unit{\second}$ und $t_{zur} = (12.648\pm 0.416)\unit{\second}$:
 \begin{align*}
   \eta_{hin} &= (1.32575\pm 0.05477)\unit{\milli\pascal\second}\\
   \eta_{zur} &= (1.35292\pm 0.04450)\unit{\milli\pascal\second}
 \end{align*}
-Die Fehlerfortpflanzung wurde mit der Gauß´schen Fehlerfortpflanzung berechnet:
-\begin{equation*}
-  \symup{\Delta}f = \sqrt{\left(\frac{\partial f}{\partial x}\symup{\Delta}x\right)^2 + \left(\frac{\partial f}{\partial y}\symup{\Delta}y\right)^2 +\ldots}
-\end{equation*}
 Es wurde Gleichung \eqref{} nach $K$ umgeformt und mit dem nun bekannten $\eta$ kann $K_{gr}$ mit
 den Zeiten für die große Kugel $t_{hin} = (81.968\pm 0.367)\unit{\second}$ und $t_{zur} = (81.812\pm 1.019)\unit{\second}$ berechnet werden:
 \begin{align*}
   Hin : K_{gr} &= \frac{\eta_{hin}}{(\rho_K-\rho_{Fl})t_{hin}} = (11.5521\pm 0.4800)\unit{\micro\pascal\cubic\centi\meter\per\gram}\\
   Zurueck : K_{gr} &= \frac{\eta_{zur}}{(\rho_K-\rho_{Fl})t_{zur}} = (11.8113\pm 0.4154)\unit{\micro\pascal\cubic\centi\meter\per\gram}
 \end{align*}
-Nun wurden die Werte der Messung zu verschiedenen Temperaturen aus \autoref{tab:Tabelle2} gemittelt und die Standardabweichungen berechnet, sowie für die folgende
-berechnung die Temperaturen in $\unit{\kelvin}$ angegeben. Außerdem wurden die zugehörigen $\eta$ nach \eqref{} bestimmt und alles in der folgenden Tabelle aufgeführt:
-\begin{table}
+\subsection{Andradesche Gleichung}
+Um die konstanten $A$ und $B$ aus der Andradeschen Gleichung zu bestimmen wurden die Werte der Messung zu verschiedenen Temperaturen aus \autoref{tab:Tabelle2}
+gemittelt und die Standardabweichungen berechnet, sowie für die folgende
+Berechnung die Temperaturen in $\unit{\kelvin}$ angegeben. Außerdem wurden die zugehörigen $\eta$ nach \eqref{} bestimmt.
+\begin{table}[H]
   \centering
   \caption{Es wurden die Zeiten wieder verdoppelt, um sich wieder wie die Apperatkonstanten auf die Strecke von $\symup{\Delta}s=100\unit{\milli\meter}$ zu beziehen.}
   \begin{tabular}{ccccc}
@@ -79,3 +79,28 @@ berechnung die Temperaturen in $\unit{\kelvin}$ angegeben. Außerdem wurden die 
   \end{tabular}
   \label{tab:Tabelle3}
 \end{table}
+Nun wurde die Andradesche Gleichung \eqref{} so umgeformt um $\ln\left(\eta\right)$ gegen $T^{-1}$ in einem Diagramm darzustellen und dazu ein lineare Regression zu berechnen:
+\begin{equation*}
+  \ln\left(\eta\right) = \frac{B}{T} + \ln\left(A\right)
+\end{equation*}
+\begin{figure}[H]
+  \centering
+  \includegraphics{plot.pdf}
+  \caption{In diesem Diagramm ist $T^{-1}$ gegen $\ln\left(\eta\right)$ mit den Daten aus \autoref{tab:Tabelle3} aufgetragen, sowie die zugehörigen linearen Regressionen dargestellt.}
+  \label{fig:plot}
+\end{figure}
+Die konstanten $A$ und $B$ der Andradeschen Gleichung ergeben sich danach für den Hinweg zu:
+\begin{align*}
+  \ln\left(A_{hin}\right) &= (-12.6842\pm 0.1248) \\
+  A_{hin} &= (3.0997\pm 0.4120 ) \cdot 10^{-6} \\
+  B_{hin} &= (1758.9033\pm 38.8663)\unit{\kelvin}.
+\end{align*}
+Und für den Rückweg ergibt sich:
+\begin{align*}
+  \ln\left(A_{zur}\right) &= (-12.7903\pm 0.1725) \\
+  A_{zur} &= (2.7877\pm 0.5248 ) \cdot 10^{-6} \\
+  B_{zur} &= (1801.5717\pm 53.7424)\unit{\kelvin}.
+\end{align*}
+\subsection{Reynoldsche Zahl}
+%(1758.9033248162464, 38.866292747498264, -12.684206665569365, 0.12475206164663132)
+%(1801.5716961689873, 53.742430701377735, -12.790344733646561, 0.1725011199667259)
