@@ -1,3 +1,55 @@
 \section{Theorie}
 \label{sec:Theorie}
 
+\subsection{Reynolds-Zahl}
+\label{subsec:Reynolds-Zahl}
+
+Die Reynolds-Zahl $Re$ gibt Auskunft darüber, ob eine Strömung laminar oder turbulent ist. \\
+Das Verhalten von Objekten, wie einer Kugel, innerhalb dieser Strömung ist von verschiedenen Größen abhängig.\\
+Darunter fallen die Dichte $\rho$, dynamische und kinematische Viskosität $\eta$ und $\nu$, 
+und Strömungsgeschwindigkeit $v$ der Flüssigkeit 
+und der Durchmesser $d$ der Kugel.
+
+Die Reynolds-Zahl ist definiert über: 
+
+\begin{equation}
+    Re = \frac{\rho v d }{\eta} = \frac{v d }{\nu}
+\end{equation}
+
+mit $\eta = \nu \rho$.
+
+Ab einem kritischen Wert von $Re_{krit} \approx 2300$ wird eine bisher laminare Strömung bei 
+minimalen Störungen turbulent, das heißt, es entwickeln sich Wirbel, und die Schichten gleicher Strömungsgeschwindigkeit, 
+die bei laminarer Strömung parallel zueinander sind, vermischen sich miteinander.
+
+Dieses Verhalten lässt sich durch die Kräfte $F_G$, $F_{Auftrieb}$ und $F_{Reibung}$, die auf die Kugel wirken, begründen.\\
+Die Reibung bezieht sich hier auf die Flüssigkeitsschichten. \\
+
+Für die Berechnung der Viskosität $\eta$ gibt es die Formel 
+
+\begin{equation}
+    \eta = K (\rho_{Kugel} - \rho_{Fluessigkeit}) \cdot t
+\end{equation}
+
+K ist hier eine Apparaturkonstante, die sowohl durch die Kugelgeometrie, als auch die Fallhöhe bedingt wird.\\
+
+
+
+Bei Betrachtung der Temperaturabhängigkeit der dynamischen Viskosität wird die Andradesche Gleichung genutzt:
+
+\begin{equation}
+    \eta(T) = A \cdot exp(\frac{B}{T})
+\end{equation}
+
+Dabei sind A und B Konstanten.
+
+Bei der linearen Regression wird sie zu
+
+\begin{equation}
+    ln(\eta(T)) = B \cdot \frac{1}{T} + ln(A)
+\end{equation}
+
+
+
+
+\cite{sample}
