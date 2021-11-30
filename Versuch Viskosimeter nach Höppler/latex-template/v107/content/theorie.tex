@@ -13,6 +13,7 @@ und der Durchmesser $d$ der Kugel.
 Die Reynolds-Zahl ist definiert über: 
 
 \begin{equation}
+    \label{eqn:Reynolds}
     Re = \frac{\rho v d }{\eta} = \frac{v d }{\nu}
 \end{equation}
 
@@ -28,6 +29,7 @@ Die Reibung bezieht sich hier auf die Flüssigkeitsschichten. \\
 Für die Berechnung der Viskosität $\eta$ gibt es die Formel 
 
 \begin{equation}
+    \label{eqn:Eta}
     \eta = K (\rho_{Kugel} - \rho_{Fluessigkeit}) \cdot t
 \end{equation}
 
@@ -38,6 +40,7 @@ K ist hier eine Apparaturkonstante, die sowohl durch die Kugelgeometrie, als auc
 Bei Betrachtung der Temperaturabhängigkeit der dynamischen Viskosität wird die Andradesche Gleichung genutzt:
 
 \begin{equation}
+    \label{eqn:Andrad}
     \eta(T) = A \cdot exp(\frac{B}{T})
 \end{equation}
 
@@ -46,10 +49,6 @@ Dabei sind A und B Konstanten.
 Bei der linearen Regression wird sie zu
 
 \begin{equation}
+    \label{eqn:AndradLin}
     ln(\eta(T)) = B \cdot \frac{1}{T} + ln(A)
 \end{equation}
-
-
-
-
-\cite{sample}
