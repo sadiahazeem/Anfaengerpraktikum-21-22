@@ -7,6 +7,12 @@ In diesem Versuch ist das zu untersuchende System ein RC-Schaltkreis.
 Die Entladung des Kondensators durch einen Strom, der durch den Widerstand fließt, 
 ist ein Beispiel für die Relaxation.
 
+Zielsetzung des Versuchs ist, die Zeitkonstante des RC-Kreises zu ermitteln, sowie die
+Messung der Amplitude der Kondensatorspannung und dem Phasenversatz von
+Generator- und Kondensatorspannung.\\
+Diese werden jeweils in Abhängigkeit von der Generatorfrequenz betrachtet.\\
+Der letzte Teil des Versuches beschäftigt sich mit der Verwendung des RC-Gliedes als Integrator.
+
 \subsection{Relaxationsgleichung}
 \label{subsec:Die Relaxationsgleichung}
 
@@ -28,8 +34,8 @@ Es ergibt sich:
 
 \begin{equation} 
     \label{Rel_RC}
-ln\frac{A(t)-A(\infty)}{A(0)-A(\infty)} = ct \\
-\Longleftrightarrow\qquad A(t) = A(\infty) + [A(0)-A(\infty)] \cdot exp(ct)
+    \textrm{ln}\frac{A(t)-A(\infty)}{A(0)-A(\infty)} = ct \\
+\Longleftrightarrow\qquad A(t) = A(\infty) + [A(0)-A(\infty)] \cdot \textrm{exp}(ct)
 \end{equation}
 
 
@@ -46,7 +52,7 @@ Umformungen, wie bei der allgemeinen Relaxationsgleichung ~\eqref{Rel_allg}
 
 \begin{equation}
     \label{RelQ}
-Q(t) = Q(0)\cdot exp(-\frac{t}{RC})
+Q(t) = Q(0)\cdot \textrm{exp}(-\frac{t}{RC})
 \end{equation}
 
 $\frac{1}{RC}$ ist hier die Zeitkonstante (wie oben c).
@@ -55,14 +61,14 @@ $\frac{1}{RC}$ ist hier die Zeitkonstante (wie oben c).
 \subsection{Auf- und Entladevorgaenge bei Wechselspannung}
 \label{subsec:Entladevorgaenge bei Wechselspannung}
 
-Die angelegte Wechselspannung $U(t) = U_0 cos(\omega t)$ lässt sich als periodische Anregung beschreiben, 
+Die angelegte Wechselspannung $U(t) = U_0 \textrm{cos}(\omega t)$ lässt sich als periodische Anregung beschreiben, 
 wie sie auch aus der Mechanik bekannt ist.
 
 Zwischen $U_G$ und $U_C$ bildet sich der Phasenversatz $\varphi(\omega)$, sodass $U_C$ wie folgt beschrieben werden
 kann:
 
 \begin{equation}
-    U_C = A(\omega) \cdot cos(\omega t + \varphi(\omega))
+    U_C = A(\omega) \cdot \textrm{cos}(\omega t + \varphi(\omega))
 \end{equation}
 
 Darus erhält man die Beziehung zwischen Frequenz und Phase:
