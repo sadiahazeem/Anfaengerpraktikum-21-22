@@ -4,16 +4,16 @@ import numpy as np
 
 x, y = np.genfromtxt('dataB.txt', unpack=True)
 x *=1e3
-y /=3.6
+y /=7.5
 
-def f(t, a, b):
-    return np.exp(-a*t + b)
+def f(t, a):
+    return 1/((np.sqrt(1+a**2*(t*2*np.pi)**2)))
+
+parameters, pcov = curve_fit(f, x, y, p0=(0.1))
+print(parameters, np.sqrt(np.diag(pcov)), sep='\n')
 
 def g(t):
-    return 1/(np.sqrt(1+(t*0.0026401)**2))
-
-parameters, pcov = curve_fit(f, x, y, p0=(0.1,1))
-print(parameters, np.sqrt(np.diag(pcov)), sep='\n')
+    return 1/(np.sqrt(1+(t*2*np.pi*0.0007531)**2))
 
 t_plot = np.linspace(-0.1, 52, 1000)*1e3
 
