@@ -99,18 +99,19 @@ plt.figure()
 plt.grid(True)
 plt.plot(x_rechts_temp, y_rechts, label='Test', color='r', linestyle='dashed')
 plt.scatter(x_rechts_temp, y_rechts, label='Test2', color='b')
-plt.xlabel(r'$L*x^2 - \frac{x^3}{3} \mathbin{/} \unit{\mm\cubed}$')
+plt.xlabel(r'$3*L^2*x - 4*x^3 \mathbin{/} \unit{\mm\cubed}$')
 plt.ylabel(r'$D_m \mathbin{/} \unit{\mm}$')
 plt.legend(loc='best')
 
 plt.tight_layout(pad=0, h_pad=1.08, w_pad=1.08)
 plt.savefig('build/plot_beidseitig_rechts.pdf')
 
+
 plt.figure()
 plt.grid(True)
 plt.plot(x_links_temp, y_links, label='Test', color='r', linestyle='dashed')
 plt.scatter(x_links_temp, y_links, label='Test2', color='b')
-plt.xlabel(r'$L*x^2 - \frac{x^3}{3} \mathbin{/} \unit{\mm\cubed}$')
+plt.xlabel(r'$3*L^2*x - 4*x^3 \mathbin{/} \unit{\mm\cubed}$')
 plt.ylabel(r'$D_m \mathbin{/} \unit{\mm}$')
 plt.legend(loc='best')
 
