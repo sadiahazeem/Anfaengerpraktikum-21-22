@@ -16,20 +16,151 @@ Die Maße, also Durchmesser $d$ bzw. Kantenlänge $a$ des eckigen Stabes mit qua
 \end{equation}
 
 Der eckige Stab besteht aus Aluminium, der runde aus Messing.\\
-Die Literatiurwerte für die Elastizitätsmodule der Materialien lauten mit  nach 
+Um die Elastizitätsmodule zu bestimmen, müssen zuerst die Flächenträgheitsmomente $I$ nach --- errechnet werden.\\
+Für den quadratischen Querschnitt mit Kantenlänge a ergibt sich die Formel $I_Q = \frac{a^4}{12}$ und 
+für den kreisförmigen Querschnitt
+$I_K = \frac{\pi r^4}{4}$. \\
+Somit kommt man, die Gaußsche Fehlerfortpflanzung hinzugezogen, zu folgenden Flächenträgheitsmomenten:
 
 \begin{equation}
-  E_{Messing} =   \quad \textrm{und} \quad E_{Aluminium} = 
+  I_{rund} = \frac{\pi (0.5\cdot 10^{-3}m)^4}{4} = 4,91 \cdot 10^{-14}m^4 \quad 
+  \textrm{und} \quad I_{eckig} = \frac{(1 \cdot 10^{-3}m)^4}{12} = 8,34 \cdot 10^{-14}m^4
 \end{equation}
+
+mit 
+
+\begin{equation}
+  \varDelta I_{rund} =  \sqrt{ (\frac{\partial I_{rund}}{\partial r})^2 \cdot (\varDelta r)^2} =  \\
+  \textrm{und} \quad \varDelta I_{eckig} = \sqrt{ (\frac{\partial I_{eckig}}{\partial a})^2 } = 
+\end{equation}
+
+
+
+\subsection{Einseitige Einspannung}
+\label{sec:Einseitige Einspannung}
+
+
+
+\subsubsection{Runder Stab}
+\label{sec:Runder Stab}
+
+\begin{table}[H]
+  \centering
+  \caption{Es wurden die Zeiten wieder verdoppelt, um sich, wie die Apparaturkonstanten, auf die Strecke 
+  von $\symup{\Delta}s=100\unit{\milli\meter}$ zu beziehen.}
+  \begin{tabular}{ccccc}
+    \toprule
+    {$T \mathbin{/} \unit{\kelvin}$} &
+    {$\bar{t}_{hin} \mathbin{/} \unit{\second}$} &
+    {$\bar{t}_{zur} \mathbin{/} \unit{\second}$} &
+    {$\eta_{hin} \mathbin{/} \unit{\milli\pascal\second}$} &
+    {$\eta_{zur} \mathbin{/} \unit{\milli\pascal\second}$} \\
+    \midrule
+    298.15 & 70.34          & 70.72          & 1.1386$\pm$0.0473 & 1.1705$\pm$0.0412 \\
+    302.15 & 65.15$\pm$0.25 & 67.06          & 1.0554$\pm$0.0440 & 1.1107$\pm$0.0391 \\
+    305.15 & 59.61$\pm$0.31 & 59.89$\pm$0.37 & 0.9657$\pm$0.0404 & 0.9922$\pm$0.0354 \\
+    307.15 & 58.73$\pm$0.49 & 58.84$\pm$0.26 & 0.9528$\pm$0.0404 & 0.9740$\pm$0.0346 \\
+    309.15 & 57.16$\pm$0.42 & 57.85$\pm$0.39 & 0.9273$\pm$0.0391 & 0.9595$\pm$0.0344 \\
+    311.15 & 54.31$\pm$0.59 & 55.39$\pm$0.39 & 0.8821$\pm$0.0379 & 0.9199$\pm$0.0330 \\
+    313.15 & 51.7$\pm$0.26  & 52.82$\pm$0.46 & 0.8398$\pm$0.0351 & 0.8772$\pm$0.0318 \\
+    315.15 & 50.82$\pm$0.02 & 50.82$\pm$0.62 & 0.8255$\pm$0.0343 & 0.8440$\pm$0.0314 \\
+    317.15 & 48.61$\pm$0.53 & 48.54$\pm$0.14 & 0.7907$\pm$0.0340 & 0.8073$\pm$0.0285 \\
+    319.15 & 47.34$\pm$0.26 & 47.64$\pm$0.34 & 0.7701$\pm$0.0323 & 0.7923$\pm$0.0284 \\
+    321.15 & 45.59$\pm$0.43 & 45.66$\pm$0.14 & 0.7427$\pm$0.0316 & 0.7606$\pm$0.0269 \\
+    323.15 & 44.2$\pm$1.24  & 44.4$\pm$0.22  & 0.7201$\pm$0.0361 & 0.7396$\pm$0.0263 \\
+    \bottomrule
+  \end{tabular}
+  \label{tab:Tabelle1}
+\end{table}
+
+\subsubsection{Eckiger Stab}
+\label{sec:Eckiger Stab}
+
+
+\begin{table}[H]
+  \centering
+  \caption{Es wurden die Zeiten wieder verdoppelt, um sich, wie die Apparaturkonstanten, auf die Strecke 
+  von $\symup{\Delta}s=100\unit{\milli\meter}$ zu beziehen.}
+  \begin{tabular}{ccccc}
+    \toprule
+    {$T \mathbin{/} \unit{\kelvin}$} &
+    {$\bar{t}_{hin} \mathbin{/} \unit{\second}$} &
+    {$\bar{t}_{zur} \mathbin{/} \unit{\second}$} &
+    {$\eta_{hin} \mathbin{/} \unit{\milli\pascal\second}$} &
+    {$\eta_{zur} \mathbin{/} \unit{\milli\pascal\second}$} \\
+    \midrule
+    298.15 & 70.34          & 70.72          & 1.1386$\pm$0.0473 & 1.1705$\pm$0.0412 \\
+    302.15 & 65.15$\pm$0.25 & 67.06          & 1.0554$\pm$0.0440 & 1.1107$\pm$0.0391 \\
+    305.15 & 59.61$\pm$0.31 & 59.89$\pm$0.37 & 0.9657$\pm$0.0404 & 0.9922$\pm$0.0354 \\
+    307.15 & 58.73$\pm$0.49 & 58.84$\pm$0.26 & 0.9528$\pm$0.0404 & 0.9740$\pm$0.0346 \\
+    309.15 & 57.16$\pm$0.42 & 57.85$\pm$0.39 & 0.9273$\pm$0.0391 & 0.9595$\pm$0.0344 \\
+    311.15 & 54.31$\pm$0.59 & 55.39$\pm$0.39 & 0.8821$\pm$0.0379 & 0.9199$\pm$0.0330 \\
+    313.15 & 51.7$\pm$0.26  & 52.82$\pm$0.46 & 0.8398$\pm$0.0351 & 0.8772$\pm$0.0318 \\
+    315.15 & 50.82$\pm$0.02 & 50.82$\pm$0.62 & 0.8255$\pm$0.0343 & 0.8440$\pm$0.0314 \\
+    317.15 & 48.61$\pm$0.53 & 48.54$\pm$0.14 & 0.7907$\pm$0.0340 & 0.8073$\pm$0.0285 \\
+    319.15 & 47.34$\pm$0.26 & 47.64$\pm$0.34 & 0.7701$\pm$0.0323 & 0.7923$\pm$0.0284 \\
+    321.15 & 45.59$\pm$0.43 & 45.66$\pm$0.14 & 0.7427$\pm$0.0316 & 0.7606$\pm$0.0269 \\
+    323.15 & 44.2$\pm$1.24  & 44.4$\pm$0.22  & 0.7201$\pm$0.0361 & 0.7396$\pm$0.0263 \\
+    \bottomrule
+  \end{tabular}
+  \label{tab:Tabelle2}
+\end{table}
+
+\subsection{Beidseitige Auflage}
+\label{sec:Beidseitige Auflage}
+
+
+
+\begin{table}[H]
+  \centering
+  \caption{Es wurden die Zeiten wieder verdoppelt, um sich, wie die Apparaturkonstanten, auf die Strecke 
+  von $\symup{\Delta}s=100\unit{\milli\meter}$ zu beziehen.}
+  \begin{tabular}{ccccc}
+    \toprule
+    {$T \mathbin{/} \unit{\kelvin}$} &
+    {$\bar{t}_{hin} \mathbin{/} \unit{\second}$} &
+    {$\bar{t}_{zur} \mathbin{/} \unit{\second}$} &
+    {$\eta_{hin} \mathbin{/} \unit{\milli\pascal\second}$} &
+    {$\eta_{zur} \mathbin{/} \unit{\milli\pascal\second}$} \\
+    \midrule
+    298.15 & 70.34          & 70.72          & 1.1386$\pm$0.0473 & 1.1705$\pm$0.0412 \\
+    302.15 & 65.15$\pm$0.25 & 67.06          & 1.0554$\pm$0.0440 & 1.1107$\pm$0.0391 \\
+    305.15 & 59.61$\pm$0.31 & 59.89$\pm$0.37 & 0.9657$\pm$0.0404 & 0.9922$\pm$0.0354 \\
+    307.15 & 58.73$\pm$0.49 & 58.84$\pm$0.26 & 0.9528$\pm$0.0404 & 0.9740$\pm$0.0346 \\
+    309.15 & 57.16$\pm$0.42 & 57.85$\pm$0.39 & 0.9273$\pm$0.0391 & 0.9595$\pm$0.0344 \\
+    311.15 & 54.31$\pm$0.59 & 55.39$\pm$0.39 & 0.8821$\pm$0.0379 & 0.9199$\pm$0.0330 \\
+    313.15 & 51.7$\pm$0.26  & 52.82$\pm$0.46 & 0.8398$\pm$0.0351 & 0.8772$\pm$0.0318 \\
+    315.15 & 50.82$\pm$0.02 & 50.82$\pm$0.62 & 0.8255$\pm$0.0343 & 0.8440$\pm$0.0314 \\
+    317.15 & 48.61$\pm$0.53 & 48.54$\pm$0.14 & 0.7907$\pm$0.0340 & 0.8073$\pm$0.0285 \\
+    319.15 & 47.34$\pm$0.26 & 47.64$\pm$0.34 & 0.7701$\pm$0.0323 & 0.7923$\pm$0.0284 \\
+    321.15 & 45.59$\pm$0.43 & 45.66$\pm$0.14 & 0.7427$\pm$0.0316 & 0.7606$\pm$0.0269 \\
+    323.15 & 44.2$\pm$1.24  & 44.4$\pm$0.22  & 0.7201$\pm$0.0361 & 0.7396$\pm$0.0263 \\
+    \bottomrule
+  \end{tabular}
+  \label{tab:Tabelle3}
+\end{table}
+
+
+
+
+
+
 
 
 
 
 \begin{figure}
   \centering
-  \includegraphics{plot.pdf}
+  \includegraphics{plot_messing_einseitig.pdf}
   \caption{Plot.}
   \label{fig:plot}
+\end{figure}
+
+\begin{figure}
+  \centering
+  \includegraphics{plot_alu_einseitig.pdf}
+  \caption{Plot.}
+  \label{fig:plot_alu_einseitig}
 \end{figure}
 
 
