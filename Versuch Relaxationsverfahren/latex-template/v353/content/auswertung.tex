@@ -227,29 +227,47 @@ Die Abhängigkeit der Relativamplitude $\frac{U_c}{U_0}$ von der Phase $\varphi$
   \label{fig:plot4}
 \end{figure}
 
-\begin{figure}
-  
+\begin{figure}[H]  
   \centering
   \textbf{Integration verschiedener Generatorspannungen bei einer Frequenz $\symbf{f = 4726\unit{\hertz}}$}\par\medskip
   \begin{subfigure}{0.48\textwidth}
     \centering
     \includegraphics[scale=0.1]{content/sinInt.png}
     \caption{sin}
+    \label{subfig:sin}
   \end{subfigure}
   \hfill
   \begin{subfigure}{0.48\textwidth}
     \centering
     \includegraphics[scale=0.1]{content/saegInt.png}
-    \caption{Sägezahn}
+    \caption{Dreieck}
+    \label{subfig:Saege}
   \end{subfigure}
   \caption{}
   \label{fig:abb9}
 \end{figure}
 
-\begin{figure}
-  
+\begin{figure}[H]
   \centering
   \includegraphics[scale=0.1]{content/rechteckInt.png}
   \caption{Rechteck}
   \label{fig:abb10}
 \end{figure}
+Das der RC-Keis bei dieser Frequenz als Integrator arbeitet lässt sich einzelnd für alle Funktionen nach \eqref{integrator} zeigen.
+Für die Sinusspannung folgt:
+\begin{equation*}
+  U_C = \frac{1}{RC} \int_{0}^{t} \sin(\tau) d\tau = \frac{1}{RC}\left(-\cos(t) - 1\right),
+\end{equation*}
+was sich mit der beobachteten Spannung $U_c$, welche in \autoref{subfig:sin} zum Sinus Phasenverschoben ist, deckt.
+Für die Dreiecksspannung, die eine Gerade nach $U_c(t) = mt + b$ ist, folgt:
+\begin{equation*}
+  U_C = \frac{1}{RC} \int_{0}^{t} m(\tau) + b d\tau = \frac{1}{RC}\left(\frac{1}{2}mt^2 + tb + c\right),
+\end{equation*}
+was eine quadratische Funktion ist und sich wiederum mit \autoref{subfig:Saege} deckt.
+Zuletzt folgt für die Rechteckspannung, die eine Funktion wie $U_c(t) = a$ ist, wobei $a$ eine reelle Konstante ist:
+\begin{equation*}
+  U_C = \frac{1}{RC} \int_{0}^{t} a d\tau = \frac{1}{RC}\left(at + c\right).
+\end{equation*}
+Es folgt also eine Dreiecksspannung, was sich ebenso mit \autoref{fig:abb9} deckt.
+In den Integrationen ist $c$ eine reelle Konstante.
+Es zeigt sich also, das die beobachteten Kondensatorspannungen sich für alle angelegten Generatorspannungen als Integrator funktioniert.
