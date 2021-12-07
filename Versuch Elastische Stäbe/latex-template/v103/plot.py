@@ -14,13 +14,13 @@ x_temp_500 = L_mm*x_messing_500**2 - x_messing_500**3/3
 model_500 = np.polyfit(x_temp_500, dm_messing_500, 1)
 predict_500 = np.poly1d(model_500)
 y_temp_500 = predict_500(x_temp_500)
-
+print(model_500)
 # Regression of messing measurements for d0
 x_temp = L_mm*x_messing**2 - x_messing**3/3
 model = np.polyfit(x_temp, d0_messing, 1)
 predict = np.poly1d(model)
 y_temp = predict(x_temp)
-
+print(model)
 # Linspace for y_ready values
 x = np.linspace(30, 470, 30)
 x_weird = L_mm*x**2 - x**3/3
@@ -48,13 +48,13 @@ x_temp_500 = L_mm*x_alu_500**2 - x_alu_500**3/3
 model_500 = np.polyfit(x_temp_500, dm_alu_500, 1)
 predict_500 = np.poly1d(model_500)
 y_temp_500 = predict_500(x_temp_500)
-
+print(model_500)
 # Regression of messing measurements for d0
 x_temp = L_mm*x_alu**2 - x_alu**3/3
 model = np.polyfit(x_temp, d0_alu, 1)
 predict = np.poly1d(model)
 y_temp = predict(x_temp)
-
+print(model)
 # Linspace for y_ready values
 x = np.linspace(30, 470, 30)
 x_weird = L_mm*x**2 - x**3/3
@@ -88,6 +88,8 @@ y_links_temp = dm_links - d0_links
 
 model_rechts = np.polyfit(x_rechts_temp, y_rechts_temp, 1)
 model_links = np.polyfit(x_links_temp, y_links_temp, 1)
+print(model_rechts)
+print(model_links)
 
 predict_rechts = np.poly1d(model_rechts)
 y_rechts = predict_rechts(x_rechts_temp)
