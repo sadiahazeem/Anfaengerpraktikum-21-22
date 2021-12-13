@@ -4,29 +4,147 @@
 \subsection{Statische Methode}
 \label{Statische Methode}
 
+\begin{figure}[H]
+  \centering
+  \includegraphics{plot1.pdf}
+  \caption{Die Temperaturverläufe der fernen Thermoelemente}
+  \label{fig:plot1}
+\end{figure}
+
+In Abbildung \ref{fig:plot1} sind die Temperaturverläufe der
+weiter vom Peltierelement entfernten Thermoelemente über die Zeit 
+dargestellt.\\
+Zu erkennen ist der exponentielle Anstieg, der bei allen Stäben zu verschieden Temperaturen 
+abflacht. \\
+Die Temperatur von Aluminium nimmt am schnellsten zu, die von Edelstahl am langsamsten.\\
+Bei den beiden Messingstäben erhitzt zu Beginn der schmale Stab minimal schneller, 
+jedoch flacht dessen Kurve früher ab, als die des breiten Stabs, so dass jener eine höhere 
+Temperatur erreicht.\\
+Nach dem Abflachen der Kurven steigen die Temperaturen aller Stäbe beinahe gleich an.\\
+
+Um zu bestimmen, welcher Stab über die beste Wärmeleitung 
+verfügt, werden nun die an den Thermoelementen T1, T4, T5 und T8 nach 700 Sekunden
+gemessenen Temperaturen betrachtet.
+
+\begin{table}[H]
+  \centering
+  \caption{Die Werte für die fernen Thermoelemente bei $t$ = 700s}
+  \begin{tabular}{cccc}
+    \toprule
+    {$T_{\textrm{Messing, breit}} \mathbin{/} \unit{\degreeCelsius}$} &
+    {$T_{\textrm{Messing, schmal}} \mathbin{/} \unit{\degreeCelsius}$} &    % zur not bei einheit $ ... ^\circ$C
+    {$T_{\textrm{Aluminium}} \mathbin{/} \unit{\degreeCelsius}$} &
+    {$T_{\textrm{Edelstahl}} \mathbin{/} \unit{\degreeCelsius}$} \\
+    \midrule
+    44,08 & 42,15 & 47,27 & 34,33 \\   
+    \bottomrule
+  \end{tabular}
+  \label{tab:Tabelle1}
+\end{table}
+
+Anhand der Tabelle lässt sich die Vermutung, dass Aluminium die höchste und 
+Edelstahl die geringste Wärmeleitzahl besitzt, stützen. \\
+
+Mit --- lässt sich der Wärmestrom $\Phi$ zu verschiedenen Zeitpunkten berechnen. \\
+
+\begin{table}[H]   % unfertig ---------
+  \centering
+  \caption{Die Werte für die fernen Thermoelemente bei $t$ = 700s}
+  \begin{tabular}{ccccc}
+    \toprule
+    {$t \mathbin{/} \unit{\second}$} &
+    {$(T_2 - T_1) \mathbin{/} \unit{\degreeCelsius}$} &    % zur not bei einheit $ ... ^\circ$C
+    {$\Phi_{21} \mathbin{/} \unit{\watt}$} &
+    {$T(T_7 - T_8) \mathbin{/} \unit{\degreeCelsius}$} &
+    {$\Phi_{78} \mathbin{/} \unit{\watt}$} \\
+    \midrule
+    44,08 & 42,15 & 47,27 & 34,33 & \\   
+    \bottomrule
+  \end{tabular}
+  \label{tab:Tabelle2}
+\end{table}
+
+Das Vorzeichen des Wärmestroms gibt Auskunft über dessen Richtung.\\
 
 
+\begin{figure}[H]
+  \centering
+  \includegraphics{plot2.pdf}
+  \caption{Die Temperaturdifferenzen des Edelstahlstabs ($T_7 - T_8$) und des breiten Messingstabs ($T_2 - T_1$)}
+  \label{fig:plot2}
+\end{figure}
 
+In \ref{fig:plot2} ist zu beobachten, dass beide Kurven ähnlich 
+steil gegen eine Grenztemperaturdifferenz steigen, die beim Edelstahlstab jedoch deutlich höher
+als beim Messingstab liegt.\\ 
+Beide Grenztemperaturdifferenzen erreichen in Folge des 
+starken Anstiegs ein Maximum, nach jenem sie auf ein Plateau leicht absinken. \\
+Das Maximum wird beim Messingstab zeitlich etwas früher erreicht und das Plateau liegt bei 
+geringeren Temperaturdifferenzen, als das des Edelstahlstabs.\\
 
 
 \subsection{Dynamische Methode}
 \label{Dynamische Methode}
 
-
-
+\begin{figure}
+  \centering
+  \includegraphics{plot3.pdf}
+  \caption{Temperaturverläufe der Thermoelemente T1 und T2 am breiten Messingstab, Periodendauer 80s}
+  \label{fig:plot3}
+\end{figure}
 
 \begin{figure}
   \centering
-  \includegraphics{plot1.pdf}
-  \caption{Plot.}
-  \label{fig:plot}
+  \includegraphics{plot4.pdf}
+  \caption{Temperaturverläufe der Thermoelemente am Aluminiumstab, Periodendauer 80s}
+  \label{fig:plot4}
 \end{figure}
 
-\subsection{Fehlerrechnung}
-\label{Fehlerrechnung}
+In \ref{fig:plot3} und \ref{fig:plot4} sind für den breiten
+Messingstab (\ref{fig:plot3}) und den Aluminiumstab (\ref{fig:plot4}) die 
+Temperaturverläufe der Stäbe bei der Messung nach der Angström-Methode mit einer Periodendauer von 80 Sekunden
+über die Zeit aufgetragen.\\
 
-- muss man angeben??
-- beim schreiben ergänzen
 
 
-Siehe \autoref{fig:plot}!
+Aus dem obigen Graphen \ref{fig:plot3} lassen sich mit Hilfe der Funktion --- $scipy.signal$ folgende 
+Werte für den Phasenversatz $\Delta t$ und die Amplituden $A_{nah}$ und $A_{fern}$ ermitteln.
+
+\begin{table}[H]   % unfertig ---------
+  \centering
+  \caption{Amplituden und Phasenversatz der Temperaturwelle im breiten Messingstab}
+  \begin{tabular}{cccc}
+    \toprule
+    {$A_{nah} \mathbin{/} \unit{\degreeCelsius}$} &
+    {$A_{fern} \mathbin{/} \unit{\degreeCelsius}$} &    % zur not bei einheit $ ... ^\circ$C
+    {$\Delta t \mathbin{/} \unit{\second}$} &
+    {$\kappa \mathbin{/} \unit{\watt / \milli\degreeCelsius}$} \\
+    \midrule
+    44,08 & 42,15 & 47,27 & 34,33 \\   
+    \bottomrule
+  \end{tabular}
+  \label{tab:Tabelle3}
+\end{table}
+
+
+
+
+Analoges Verfahren wie beim Messingstab ergibt die folgende Tabelle für Aluminium.
+
+\begin{table}[H]   % unfertig ---------
+  \centering
+  \caption{Amplituden und Phasenversatz der Temperaturwelle im Aluminiumstab}
+  \begin{tabular}{cccc}
+    \toprule
+    {$A_{nah} \mathbin{/} \unit{\degreeCelsius}$} &
+    {$A_{fern} \mathbin{/} \unit{\degreeCelsius}$} &    % zur not bei einheit $ ... ^\circ$C
+    {$\Delta t \mathbin{/} \unit{\second}$} &
+    {$\kappa \mathbin{/} \unit{\watt / \milli\degreeCelsius}$} \\
+    \midrule
+    44,08 & 42,15 & 47,27 & 34,33 \\   
+    \bottomrule
+  \end{tabular}
+  \label{tab:Tabelle4}
+\end{table}
+
+
