@@ -1,4 +1,41 @@
 \section{Theorie}
 \label{sec:Theorie}
 
+Die Wärmeleitung eines Festkörpers ist ein Phänomen, das auftritt, wenn sich ein selbiger nicht im Temperaturgleichgewicht
+befindet. \\
+Dann findet ein Wärmeaustausch durch Phononen und freie Elektronen nach dem 2. Hauptsatz der Thermodynamik entlang des Temperaturgefälles statt.
+Die Wärmemenge $dQ$, die in einer Zeit $dt$ in einem Stab der länge $L$, mit Dichte $\rho$, Querschnitt $A$ und spezifischer Wärme $c$ fließt, ist durch
+\begin{equation}
+    \label{eqn:WaermeMenge}
+    dQ = -\kappa A\frac{\partial T}{\partial x}dt
+\end{equation}
+definiert.\\
+Aus \eqref{eqn:WaermeMenge} erhält man durch Umformen die Gleichung für die Wärmestromdichte
+\begin{equation}
+    \label{eqn:WaermeDichte}
+    \frac{1}{A}\frac{dQ}{dt} = j_w = -\kappa \frac{\partial T}{\partial x}.
+\end{equation}
+Dabei ist $\kappa$ der materialabhängige Wärmeleitkoeffizient des Stoffes.
+Aus \eqref{eqn:WaermeMenge} und \eqref{eqn:WaermeDichte} ergibt sich die eindimensionale Wärmeleitgleichung
+\begin{equation}
+    \frac{\partial T}{\partial t} = \frac{\kappa}{\rho c}\frac{\partial^2 T}{\partial x^2},
+\end{equation}
+in welcher der Ausdruck $\frac{\kappa}{\rho c}$ als Temperaturleitfähigkeit bezeichnet wird. \\
+Diese gibt an, mit welcher "Geschwindigkeit" sich ein Temperaturgefälle des entsprechenden Stoffes ausgleicht.
+\\
+Wird nun ein langer Stab periodisch erwärmt, entsteht eine Temperaturwelle der Form
+\begin{equation}
+    T\left(x,t\right) = T_{max}e^{-\sqrt{\frac{\omega \rho c}{2\kappa}}}\cos\left(\omega t - \sqrt{\frac{\omega \rho c}{2\kappa}}x\right).
+\end{equation}
+Für die Phasengeschwindigkeit $v$ dieser Temperaturwelle ergibt sich
+\begin{equation}
+    v = \frac{\omega}{k} = \sqrt{\frac{\omega 2 \kappa}{\rho c}}
+\end{equation}
+und für die Wärmeleitfähigkeit
+\begin{equation}
+    \label{eqn:kappa}
+    \kappa = \frac{\rho c \left(\symup{\Delta}x\right)^2}{2\symup{\Delta}t\ln\left(\frac{A_{nah}}{A_{fern}}\right)}.
+\end{equation}
 
+Hierbei sind die Amplituden $A_{nah}$ und $A_{fern}$ gegeben durch Messung selbiger an den Messstellen $x_{nah}$ und $x_{fern}$.\\
+Der Abstand dieser Messstellen ist $\symup{\Delta}x$ und $\symup{\Delta}t$ die Phasendifferenz der Welle zwischen den Messstellen.
