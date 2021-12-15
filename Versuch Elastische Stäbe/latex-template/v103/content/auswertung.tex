@@ -3,36 +3,36 @@
 
 Die Maße, also Durchmesser $d$ bzw. Kantenlänge $a$ des eckigen Stabes mit quadratischem Querschnitt, Masse $m$ und Länge $l$ der Stäbe betragen
 
-\begin{equation}
+\begin{align*}
   a_{eckig} = 10,1 \pm 0,05mm \\
   m_{eckig} = 167,9 \pm 0,1g \\
   l_{eckig} = 620 \pm 0,05mm\\
-\end{equation}
+\end{align*}
 
-\begin{equation}
+\begin{align*}
   d_{rund} = 10,1 \pm 0,05mm \\
   m_{rund} = 390,6 \pm 0,1g \\
   l_{rund} = 592 \pm 0,05mm \\
-\end{equation}
+\end{align*}
 
 Der eckige Stab besteht aus Aluminium, der runde aus Messing.\\
 Um die Elastizitätsmodule zu bestimmen, müssen zuerst die Flächenträgheitsmomente $I$ nach --- errechnet werden.\\
 Für den quadratischen Querschnitt mit Kantenlänge a ergibt sich die Formel $I_Q = \frac{a^4}{12}$ und 
 für den kreisförmigen Querschnitt
 $I_K = \frac{\pi r^4}{4}$. \\
-Somit kommt man, die Gaußsche Fehlerfortpflanzung hinzugezogen, zu folgenden Flächenträgheitsmomenten:
+Somit ergeben sich, die Gaußsche Fehlerfortpflanzung hinzugezogen, die folgenden Flächenträgheitsmomenten
 
-\begin{equation}
+\begin{equation*}
   I_{rund} = \frac{\pi (0.5\cdot 10^{-3}m)^4}{4} = 4,91 \cdot 10^{-14}m^4 \quad 
   \textrm{und} \quad I_{eckig} = \frac{(1 \cdot 10^{-3}m)^4}{12} = 8,34 \cdot 10^{-14}m^4
-\end{equation}
+\end{equation*}
 
 mit 
 
-\begin{equation}
+\begin{equation*}
   \varDelta I_{rund} =  \sqrt{ (\frac{\partial I_{rund}}{\partial r})^2 \cdot (\varDelta r)^2} =  \\
   \textrm{und} \quad \varDelta I_{eckig} = \sqrt{ (\frac{\partial I_{eckig}}{\partial a})^2 \cdot (\varDelta a)^2} = 
-\end{equation}
+\end{equation*}
 
 Damit berechnen sich die Elastizitätsmodule durch 
 
@@ -53,7 +53,7 @@ Mit $F = m \cdot 9.81 m/s^2$
 
 \begin{table}[H]
   \centering
-  \caption{Die Werte für die einseitige Einspannung bei Messung am runden Messingstab ohne Gewicht}
+  \caption{Die Werte für die einseitige Einspannung bei Messung am runden Messingstab ohne Gewicht.}
   \begin{tabular}{ccccc}
     \toprule
     {$x \mathbin{/} \unit{\milli\metre}$} &
@@ -85,7 +85,7 @@ Mit $F = m \cdot 9.81 m/s^2$
 
 \begin{table}[H]
   \centering
-  \caption{Die Werte für die einseitige Einspannung bei Messung am runden Messingstab mit einem Gewicht von 550g}
+  \caption{Die Werte für die einseitige Einspannung bei Messung am runden Messingstab mit einem Gewicht von 550g.}
   \begin{tabular}{ccccc}
     \toprule
     {$x \mathbin{/} \unit{\milli\metre}$} &
@@ -120,10 +120,9 @@ So werden die folgenden Werte der Steigung a der Ausgleichsgeraden und des y-Ach
 
 % fehlt noch, außerdem wieder E berechnen mit folgender glecihung
 
-\begin{equation}
-  E = \frac{m \cdot 9.81 m/s^2}{2 \cdot I \cdot a} %hier rechnung einfügen, a ist die steigung, nicht kantenlänge
-\end{equation}
- 
+\begin{equation*}
+  E = \frac{F_g}{2 \cdot I \cdot a} %hier rechnung einfügen, a ist die steigung, nicht kantenlänge
+\end{equation*}
 
 
 \begin{figure}
@@ -138,7 +137,7 @@ So werden die folgenden Werte der Steigung a der Ausgleichsgeraden und des y-Ach
 
 \begin{table}[H]
   \centering
-  \caption{Die Werte für die einseitige Einspannung bei Messung am eckigen Aluminiumstab ohne Gewicht}
+  \caption{Die Werte für die einseitige Einspannung bei Messung am eckigen Aluminiumstab ohne Gewicht.}
   \begin{tabular}{ccccc}
     \toprule
     {$x \mathbin{/} \unit{\milli\metre}$} &
@@ -166,7 +165,7 @@ So werden die folgenden Werte der Steigung a der Ausgleichsgeraden und des y-Ach
 
 \begin{table}[H]
   \centering
-  \caption{Die Werte für die einseitige Einspannung bei Messung am eckigen Aluminiumstab mit einem Gewicht von 550g}
+  \caption{Die Werte für die einseitige Einspannung bei Messung am eckigen Aluminiumstab mit einem Gewicht von 550g.}
   \begin{tabular}{ccccc}
     \toprule
     {$x \mathbin{/} \unit{\milli\metre}$} &
@@ -220,7 +219,7 @@ Somit ergibt sich für $E_{eckig}$ daraus:
 \begin{table}[H]
   \centering
   \caption{Die Werte für die beidseitige Auflage bei Messung am runden Messingstab von rechts bis zur Mitte, bei $D_m$ mit 
-  einem Gewicht von 1250g}
+  einem Gewicht von 1250g.}
   \begin{tabular}{ccccc}
     \toprule
     {$x \mathbin{/} \unit{\milli\metre}$} &
@@ -246,7 +245,7 @@ Somit ergibt sich für $E_{eckig}$ daraus:
 \begin{table}[H]
   \centering
   \caption{Die Werte für die beidseitige Auflage bei Messung am runden Messingstab von rechts bis zur Mitte, bei $D_m$ mit 
-  einem Gewicht von 1250g}
+  einem Gewicht von 1250g.}
   \begin{tabular}{ccccc}
     \toprule
     {$x \mathbin{/} \unit{\milli\metre}$} &
@@ -277,14 +276,14 @@ Mit den sich ergebenden Werten für $a$ und $c$ lässt sich $E = \frac{m \cdot g
 \begin{figure}
   \centering
   \includegraphics{plot_beidseitig_rechts.pdf}
-  \caption{Die lineare Regression für die Messung am beidseitig aufliegenden, runden Messingstab von rechts}
+  \caption{Die lineare Regression für die Messung am beidseitig aufliegenden, runden Messingstab von rechts.}
   \label{fig:plot_beidseitig_rechts}
 \end{figure} 
 
 \begin{figure}
   \centering
   \includegraphics{plot_beidseitig_links.pdf}
-  \caption{Die lineare Regression für die Messung am beidseitig aufliegenden, runden Messingstab von links}
+  \caption{Die lineare Regression für die Messung am beidseitig aufliegenden, runden Messingstab von links.}
   \label{fig:plot_beidseitig_links}
 \end{figure}       % irgendwie ist die achsenbeschriftung bei diesen beiden plots ncoh falsch, obwohl sie in der 
                    % plot.py schon richtig ist. sollte 3L^2 x - 4x^3 statt Lx^2...
