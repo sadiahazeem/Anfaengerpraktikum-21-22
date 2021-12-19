@@ -30,8 +30,8 @@ Somit ergeben sich, die Gaußsche Fehlerfortpflanzung hinzugezogen, die folgende
 mit 
 
 \begin{align*}
-  \varDelta I_{rund} =  \sqrt{ (\frac{\partial I_{rund}}{\partial r})^2 \cdot (\varDelta r)^2} =  \\
-  \textrm{und} \quad \varDelta I_{eckig} = \sqrt{ (\frac{\partial I_{eckig}}{\partial a})^2 \cdot (\varDelta a)^2} = 
+  \varDelta I_{rund} =  \sqrt{ (\frac{\partial I_{rund}}{\partial r})^2 \cdot (\varDelta r)^2} = 4,092 \cdot 10^{-30} m^4 \\
+  \textrm{und} \quad \varDelta I_{eckig} = \sqrt{ (\frac{\partial I_{eckig}}{\partial a})^2 \cdot (\varDelta a)^2} = 2,949 \cdot 10^{-30} m^4
 \end{align*}
 
 Damit berechnen sich die Elastizitätsmodule durch 
@@ -40,7 +40,7 @@ Damit berechnen sich die Elastizitätsmodule durch
    E = \frac{F_g}{2 \cdot I \cdot a}   
 \end{equation}
 
-Mit $F = m \cdot 9.81 m/s^2$
+Mit $F = m \cdot g$
 
 
 
@@ -116,12 +116,17 @@ Mit $F = m \cdot 9.81 m/s^2$
 
 Zur Ermittlung des Elastizitätsmodul wird eine lineare Regression durchgeführt, wobei $D(x) = D_m - D_0$ gegen 
 $Lx^2 - \frac{x^3}{3}$ aufgetragen wird.\\
-So werden die folgenden Werte der Steigung a der Ausgleichsgeraden und des y-Achsenabschnitts c ermittelt:
+So werden die folgenden Werte der Steigung a der Ausgleichsgeraden ermittelt:
 
-% fehlt noch, außerdem wieder E berechnen mit folgender glecihung
+\begin{align*}
+  1 = 2 \\
+  2 = 1
+\end{align*}
+
+damit ergibt sich für den Elastizitätsmodul des runden Stabs
 
 \begin{equation*}
-  E = \frac{F_g}{2 \cdot I \cdot a} %hier rechnung einfügen, a ist die steigung, nicht kantenlänge
+  E = \frac{0,3906kg \cdot 9,81m/s^2}{2 \cdot 4,91\cdot 10^{-14} m^4 \cdot 0.4} = 97,55 \cdot 10^{12} \pm 2,497 \cdot 10^{10} N/m^2.
 \end{equation*}
 
 
@@ -193,16 +198,20 @@ So werden die folgenden Werte der Steigung a der Ausgleichsgeraden und des y-Ach
 \end{table}
 
 Analog zum runden Messingstab lässt sich auch das Elastizitätsmodul des eckigen Stabes aus Aluminium bestimmen.\\
-Steigung und y-Achsenabschnitt lauten:      % einfügen mit align*
+Mit der Steigung 
 
-Somit ergibt sich für $E_{eckig}$ daraus:
+\begin{align*}
+  a = \frac{9}{10}
+\end{align*}
+
+ergibt sich für $E_{eckig}$ 
 
 \begin{equation*}
-  E_{eckig} =             % einfügen
+  E_{eckig} =  109,7 \pm 0,111 \cdot 10^{11} \pm N/m^2            
 \end{equation*}
 
 
-\begin{figure}
+\begin{figure}[H]
   \centering
   \includegraphics{plot_alu_einseitig.pdf}
   \caption{Die Auslenkung des einseitig eingespannten eckigen Stabs in Abhängigkeit 
@@ -270,8 +279,6 @@ Somit ergibt sich für $E_{eckig}$ daraus:
 
 Die Werte für die beidseitige Auflage werden für die lineare Regression in D(x) gegen $3L^2 x - 4x^3$ aufgetragen.
 
-Mit den sich ergebenden Werten für $a$ und $c$ lässt sich $E = \frac{m \cdot g}{48 \cdot I \cdot a}$ mit wie folgt berechnen
-
 
 
 \begin{figure}
@@ -288,4 +295,17 @@ Mit den sich ergebenden Werten für $a$ und $c$ lässt sich $E = \frac{m \cdot g
   \label{fig:plot_beidseitig_links}
 \end{figure}      
 
+Mit den sich ergebenden Werten für die Steigung $a$ 
 
+\begin{align*}
+  a_{von links} = 0,8 \\
+  a_{von rechts} = 0,8
+\end{align*}
+
+lässt sich $E = \frac{m \cdot g}{48 \cdot I \cdot a}$ zu
+
+\begin{align*}
+  E_{von links} = E_{von rechts} = 123,43 \pm 0,07351 \cdot 10^{11} N/m^2 
+\end{align*}
+
+berechnen.
