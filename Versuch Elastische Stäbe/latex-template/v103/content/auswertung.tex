@@ -22,17 +22,17 @@ für den kreisförmigen Querschnitt
 $I_K = \frac{\pi r^4}{4}$. \\
 Somit ergeben sich, die Gaußsche Fehlerfortpflanzung hinzugezogen, die folgenden Flächenträgheitsmomenten
 
-\begin{equation*}
-  I_{rund} = \frac{\pi (0.5\cdot 10^{-3}m)^4}{4} = 4,91 \cdot 10^{-14}m^4 \quad 
+\begin{align*}
+  I_{rund} = \frac{\pi (0.5\cdot 10^{-3}m)^4}{4} = 4,91 \cdot 10^{-14}m^4 \quad \\
   \textrm{und} \quad I_{eckig} = \frac{(1 \cdot 10^{-3}m)^4}{12} = 8,34 \cdot 10^{-14}m^4
-\end{equation*}
+\end{align*}
 
 mit 
 
-\begin{equation*}
+\begin{align*}
   \varDelta I_{rund} =  \sqrt{ (\frac{\partial I_{rund}}{\partial r})^2 \cdot (\varDelta r)^2} =  \\
   \textrm{und} \quad \varDelta I_{eckig} = \sqrt{ (\frac{\partial I_{eckig}}{\partial a})^2 \cdot (\varDelta a)^2} = 
-\end{equation*}
+\end{align*}
 
 Damit berechnen sich die Elastizitätsmodule durch 
 
@@ -78,7 +78,7 @@ Mit $F = m \cdot 9.81 m/s^2$
 
     \bottomrule
   \end{tabular}
-  \label{tab:Tabelle_rund_eins_0g}
+  \label{tab:Tabelle1}
 \end{table}
 
 
@@ -111,7 +111,7 @@ Mit $F = m \cdot 9.81 m/s^2$
     
     \bottomrule
   \end{tabular}
-  \label{tab:Tabelle4}
+  \label{tab:Tabelle2}
 \end{table}
 
 Zur Ermittlung des Elastizitätsmodul wird eine lineare Regression durchgeführt, wobei $D(x) = D_m - D_0$ gegen 
@@ -161,7 +161,7 @@ So werden die folgenden Werte der Steigung a der Ausgleichsgeraden und des y-Ach
     
     \bottomrule
   \end{tabular}
-  \label{tab:Tabelle5}
+  \label{tab:Tabelle3}
 \end{table}
 
 \begin{table}[H]
@@ -189,11 +189,11 @@ So werden die folgenden Werte der Steigung a der Ausgleichsgeraden und des y-Ach
     
     \bottomrule
   \end{tabular}
-  \label{tab:Tabelle6}
+  \label{tab:Tabelle4}
 \end{table}
 
 Analog zum runden Messingstab lässt sich auch das Elastizitätsmodul des eckigen Stabes aus Aluminium bestimmen.\\
-Steigung und y-Achsenabschnitt lauten:      % einfügen
+Steigung und y-Achsenabschnitt lauten:      % einfügen mit align*
 
 Somit ergibt sich für $E_{eckig}$ daraus:
 
@@ -211,32 +211,33 @@ Somit ergibt sich für $E_{eckig}$ daraus:
 \end{figure}
 
 
-
-
+\subsection{Beidseitige Auflage}  % hä erscheint nicht im text
+\label{subsec:Beiseitige Auflage}
 
 
 \begin{table}[H]
   \centering
   \caption{Die Werte für die beidseitige Auflage bei Messung am runden Messingstab von rechts bis zur Mitte, bei $D_m$ mit 
   einem Gewicht von 1250g.}
-  \begin{tabular}{ccc}
+  \begin{tabular}{cccc}
     \toprule
     {$x \mathbin{/} \unit{\milli\metre}$} &
     {$D_0(x) \mathbin{/} \unit{\milli\metre}$} &
-    {$D_m(x) \mathbin{/} \unit{\milli\metre}$} \\
+    {$D_m(x) \mathbin{/} \unit{\milli\metre}$} &
+    {$D_{abs}(x) \mathbin{/} \unit{\milli\metre}$} \\
     \midrule
-     30 & 0.01 & 0.20 \\  
-     60 & 0.04 & 0.48 \\
-     90 & 0.09 & 0.71 \\
-    120 & 0.13 & 0.93 \\
-    150 & 0.19 & 1.14 \\
-    180 & 0.22 & 1.32 \\
-    210 & 0.26 & 1.46 \\
-    240 & 0.33 & 1.58 \\
+     30 & 0.01 & 0.20 & 0.19 \\  
+     60 & 0.04 & 0.48 & 0.44 \\
+     90 & 0.09 & 0.71 & 0.62 \\
+    120 & 0.13 & 0.93 & 0.80 \\
+    150 & 0.19 & 1.14 & 0.95 \\
+    180 & 0.22 & 1.32 & 1.10 \\
+    210 & 0.26 & 1.46 & 1.20 \\
+    240 & 0.33 & 1.58 & 1.25 \\
     
     \bottomrule
   \end{tabular}
-  \label{tab:Tabelle7}
+  \label{tab:Tabelle5}
 \end{table}
 
 
@@ -245,24 +246,25 @@ Somit ergibt sich für $E_{eckig}$ daraus:
   \centering
   \caption{Die Werte für die beidseitige Auflage bei Messung am runden Messingstab von rechts bis zur Mitte, bei $D_m$ mit 
   einem Gewicht von 1250g.}
-  \begin{tabular}{ccc}
+  \begin{tabular}{cccc}
     \toprule
     {$x \mathbin{/} \unit{\milli\metre}$} &
     {$D_0(x) \mathbin{/} \unit{\milli\metre}$} &
-    {$D_m(x) \mathbin{/} \unit{\milli\metre}$} \\
+    {$D_m(x) \mathbin{/} \unit{\milli\metre}$} &
+    {$D_{abs}(x) \mathbin{/} \unit{\milli\metre}$} \\
     \midrule
-      0 & 0.00 & 0.10 \\
-     30 & 0.09 & 0.20 \\  
-     60 & 0.15 & 0.32 \\
-     90 & 0.24 & 0.41 \\
-    120 & 0.32 & 0.50 \\
-    150 & 0.35 & 0.58 \\
-    180 & 0.42 & 0.65 \\
-    210 & 0.45 & 0.70 \\
-    240 & 0.52 & 0.71 \\
+      0 & 0.00 & 0.10 & 0.10 \\
+     30 & 0.09 & 0.20 & 0.11 \\  
+     60 & 0.15 & 0.32 & 0.17 \\
+     90 & 0.24 & 0.41 & 0.17 \\
+    120 & 0.32 & 0.50 & 0.18 \\
+    150 & 0.35 & 0.58 & 0.23 \\
+    180 & 0.42 & 0.65 & 0.23 \\
+    210 & 0.45 & 0.70 & 0.25 \\
+    240 & 0.52 & 0.71 & 0.19 \\
     \bottomrule
   \end{tabular}
-  \label{tab:Tabelle_rund_beidseitig_1250g}
+  \label{tab:Tabelle6}
 \end{table}
 
 
