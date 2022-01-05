@@ -21,10 +21,10 @@ Bei den beiden Messingstäben erhitzt zu Beginn der schmale Stab minimal schnell
 jedoch flacht dessen Kurve früher ab, als die des breiten Stabs, so dass jener eine höhere 
 Temperatur erreicht.\\
 Nach dem Abflachen der Kurven steigen die Temperaturen aller Stäbe beinahe gleich an.\\
-
+\\
 Um zu bestimmen, welcher Stab über die beste Wärmeleitung 
 verfügt, werden nun die an den Thermoelementen T1, T4, T5 und T8 nach 700 Sekunden
-gemessenen Temperaturen betrachtet.
+gemessenen Temperaturen betrachtet und diese in \autoref{tab:TabelleA1} aufgeführt.
 
 \begin{table}[H]
   \centering
@@ -41,11 +41,11 @@ gemessenen Temperaturen betrachtet.
   \end{tabular}
   \label{tab:TabelleA1}
 \end{table}
-
-Anhand der Tabelle lässt sich die Vermutung, dass Aluminium die höchste und 
+\noindent Anhand der \autoref{tab:TabelleA1} lässt sich die Vermutung, dass Aluminium die höchste und 
 Edelstahl die geringste Wärmeleitzahl besitzt, stützen. \\
-
-Mit \ref{eqn:WaermeMenge} lässt sich der Wärmestrom $\Phi = \frac{\Delta Q_{21}}{\Delta t}$ zu verschiedenen Zeitpunkten berechnen. \\
+\\
+Mit \ref{eqn:WaermeMenge} lässt sich der Wärmestrom $\Phi = \frac{\Delta Q_{21}}{\Delta t}$ zu verschiedenen Zeitpunkten berechnen.
+Für den breiten Messingstab ergeben sich der Wärmestrom zu fünf verschieden Zeiten zu den in \autoref{tab:TabelleA2} eingetragenen Werten.\\
 
 \begin{table}[H]   % unfertig ---------
   \centering
@@ -64,8 +64,7 @@ Mit \ref{eqn:WaermeMenge} lässt sich der Wärmestrom $\Phi = \frac{\Delta Q_{21
   \end{tabular}
   \label{tab:TabelleA2}
 \end{table}
-
-Das Vorzeichen des Wärmestroms gibt Auskunft über dessen Richtung.\\
+\noindent Das Vorzeichen des Wärmestroms gibt Auskunft über dessen Richtung.\\
 
 
 \begin{figure}[H]
@@ -74,8 +73,7 @@ Das Vorzeichen des Wärmestroms gibt Auskunft über dessen Richtung.\\
   \caption{Die Temperaturdifferenzen des Edelstahlstabs ($T_7 - T_8$) und des breiten Messingstabs ($T_2 - T_1$)}
   \label{fig:plot2}
 \end{figure}
-
-In \ref{fig:plot2} ist zu beobachten, dass beide Kurven ähnlich 
+\noindent In \ref{fig:plot2} ist zu beobachten, dass beide Kurven ähnlich 
 steil gegen eine Grenztemperaturdifferenz steigen, die beim Edelstahlstab jedoch deutlich höher
 als beim Messingstab liegt.\\ 
 Beide Grenztemperaturdifferenzen erreichen in Folge des 
@@ -101,14 +99,14 @@ geringeren Temperaturdifferenzen, als das des Edelstahlstabs.\\
   \label{fig:plot4}
 \end{figure}
 
-In \ref{fig:plot3} und \ref{fig:plot4} sind für den breiten
-Messingstab (\ref{fig:plot3}) und den Aluminiumstab (\ref{fig:plot4}) die 
+In \autoref{fig:plot3} und \autoref{fig:plot4} sind für den breiten
+Messingstab (\autoref{fig:plot3}) und den Aluminiumstab (\autoref{fig:plot4}) die 
 Temperaturverläufe der Stäbe bei der Messung nach der Angström-Methode mit einer Periodendauer von 80 Sekunden
 über die Zeit aufgetragen.\\
 
 
 
-Es lassen sich folgende Werte für den Phasenversatz $\Delta t$ und die Amplituden $A_{nah}$ und $A_{fern}$ ermitteln.
+\noindent Es lassen sich die in \autoref{tab:TabelleA3} aufgeführten Werte für den Phasenversatz $\Delta t$ und die Amplituden $A_{nah}$ und $A_{fern}$ ermitteln.
 
 \begin{table}[H]   
   \centering
@@ -118,7 +116,7 @@ Es lassen sich folgende Werte für den Phasenversatz $\Delta t$ und die Amplitud
     {$A_{nah} \mathbin{/} \unit{\degreeCelsius}$} &
     {$A_{fern} \mathbin{/} \unit{\degreeCelsius}$} &    % zur not bei einheit $ ... ^\circ$C
     {$\Delta t \mathbin{/} \unit{\second}$} &
-    {$\kappa \mathbin{/} \unit{\watt / \milli\degreeCelsius}$} \\
+    {$\kappa \mathbin{/} \unit{\watt / \meter\kelvin}$} \\
     \midrule
     13,64 & 6,67 & 22 & 88,20 \\   
     11,63 & 5,55 & 18 & 104,25 \\
@@ -135,11 +133,15 @@ Es lassen sich folgende Werte für den Phasenversatz $\Delta t$ und die Amplitud
   \end{tabular}
   \label{tab:TabelleA3}
 \end{table}
+\noindent Für den breiten Messingstab ergibt sich gemittelt
+\begin{equation*}
+  \kappa = (100.632 \pm 2.434)\unit{\watt\per\meter\per\kelvin}.
+\end{equation*}
 
 
 
 
-Analoges Verfahren wie beim Messingstab ergibt die folgende Tabelle für Aluminium.
+\noindent Analoges Verfahren wie beim Messingstab ergibt die \autoref{tab:TabelleA4} für Aluminium.
 
 \begin{table}[H]   
   \centering
@@ -149,7 +151,7 @@ Analoges Verfahren wie beim Messingstab ergibt die folgende Tabelle für Alumini
     {$A_{nah} \mathbin{/} \unit{\degreeCelsius}$} &
     {$A_{fern} \mathbin{/} \unit{\degreeCelsius}$} &    % zur not bei einheit $ ... ^\circ$C
     {$\Delta t \mathbin{/} \unit{\second}$} &
-    {$\kappa \mathbin{/} \unit{\watt / \milli\degreeCelsius}$} \\
+    {$\kappa \mathbin{/} \unit{\watt / \meter\kelvin}$} \\
     \midrule
     18,78 & 12,70 & 6 & 419,88 \\
     15,80 &  9,46 & 8 & 243,10 \\
@@ -167,4 +169,7 @@ Analoges Verfahren wie beim Messingstab ergibt die folgende Tabelle für Alumini
   \label{tab:TabelleA4}
 \end{table}
 
-
+\noindent Für den Aluminiumstab ergibt sich gemittelt
+\begin{equation*}
+  \kappa = (249.0077 \pm 20.7677)\unit{\watt\per\meter\per\kelvin}.
+\end{equation*}
