@@ -63,7 +63,7 @@ ermitteln.
   \caption{Die Kondensatorspannung $U_C$ in Abhängigkeit der Frequenz der Erregerspannung.}
   \begin{tabular}{cc}
     \toprule
-    {$f \mathbin{/} \unit{\hertz}$} &
+    {$f \mathbin{/} \unit{\kilo\hertz}$} &
     {$U_C(t) \mathbin{/} \unit{\volt}$} \\
     \midrule
     20 & 0.75 \\
@@ -96,9 +96,23 @@ ermitteln.
 
 % plot 1
 
+\begin{figure}
+  \centering
+  \includegraphics{build/plotc.pdf}
+  \caption{Die Frequenzabhängigkeit der Kondensatorspannung $U_C$ halblogarithmisch gegen die Frequenz $f$ aufgetragen.}
+  \label{fig:plotc}
+\end{figure}
+
+
+
 % plot 2
 
-
+\begin{figure}
+  \centering
+  \includegraphics{build/plotc2.pdf}
+  \caption{Die Frequenzabhängigkeit der Kondensatorspannung $U_C$ linear gegen die Frequenz $f$ aufgetragen.}
+  \label{fig:plotc2}
+\end{figure}
 
 
 
@@ -112,7 +126,7 @@ ermitteln.
   \caption{Der Phasenversatz $\varphi$ in Abhängigkeit der Frequenz der Erregerspannung.}
   \begin{tabular}{cccc}
     \toprule
-    {$f \mathbin{/} \unit{\hertz}$} &
+    {$f \mathbin{/} \unit{\kilo\hertz}$} &
     {$a \mathbin{/} \unit{\micro\second}$} &
     {$b \mathbin{/} \unit{\micro\second}$} &
     {$\varphi \mathbin{/} rad$} \\
@@ -150,16 +164,18 @@ ermitteln.
 \begin{figure}
       \centering
       \includegraphics{build/plotd.pdf}
-      \caption{Die Phase zwischen $U_C$ und $U_{err}$ in Abhängigkeit der Frequenz von $U_{err}$.}
+      \caption{Die Phase zwischen $U_C$ und $U_{err}$ in Abhängigkeit der Frequenz von $U_{err}$, halblogarithmisch dargestellt.}
       \label{fig:plotd}
     \end{figure}
 
 
-\begin{figure}
-  \centering
-  \includegraphics{plot.pdf}
-  \caption{Plot.}
-  \label{fig:plot}
-\end{figure}
+
+    \begin{figure}
+      \centering
+      \includegraphics{build/plotd2.pdf}
+      \caption{Die Phase zwischen $U_C$ und $U_{err}$ in Abhängigkeit der Frequenz von $U_{err}$, linear dargestellt.}
+      \label{fig:plotd2}
+    \end{figure}
+
 
 
