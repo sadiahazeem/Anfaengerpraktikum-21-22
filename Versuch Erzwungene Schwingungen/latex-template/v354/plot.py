@@ -16,30 +16,24 @@ L=16.87*10**(-3) #H
 C=2.06*10**(-9) #F
 
 
-# noch mal werte mit fehlern hier ergänzen?
+# die werte mit fehler:
 
-#
-#
-#
-#x = np.linspace(0, 10, 1000)
-#y = x ** np.sin(x)
-#
-#plt.subplot(1, 2, 1)
-#plt.plot(x, y, label='Kurve')
-#plt.xlabel(r'$\alpha \mathbin{/} \unit{\ohm}$')
-#plt.ylabel(r'$y \mathbin{/} \unit{\micro\joule}$')
-#plt.legend(loc='best')
-#
-#plt.subplot(1, 2, 2)
-#plt.plot(x, y, label='Kurve')
-#plt.xlabel(r'$\alpha \mathbin{/} \unit{\ohm}$')
-#plt.ylabel(r'$y \mathbin{/} \unit{\micro\joule}$')
-#plt.legend(loc='best')
-#
-## in matplotlibrc leider (noch) nicht möglich
-#plt.tight_layout(pad=0, h_pad=1.08, w_pad=1.08)
-#plt.savefig('build/plot.pdf')
-#
+R1_e=ufloat(67.2,0.01)#Ohm          
+R2_e=ufloat(682,0.5)#Ohm
+L_e=ufloat(16.87,0.05)*10**(-3)#H
+C_e=ufloat(2.06,0.3)*10**(-9)#F
+
+
+
+# 5a, plot zur abklingdauer 
+
+
+
+
+
+
+
+
 
 
 # teilaufgabe c (diagramm u gegen f, mit theoriekurve? -- halblog: y ist ln(U/U0) )
@@ -119,4 +113,13 @@ plt.xlabel("$f\;/\;kHz$")
 plt.ylabel("$\phi \;/\;$rad")
 plt.legend(loc="best")
 plt.savefig("build/plotd2.pdf",bbox_inches='tight')
+plt.close()
+
+line_w= np.linspace(5,60)
+line_W=line_w*1000
+plt.plot(line_w,np.sqrt(R2**2+(line_W*L-1/(line_W*C))**2),"r-",label="Impedanz")
+plt.ylabel("$Z\;/\;$Ohm")
+plt.xlabel("$f\,/\,kHz$")
+plt.legend()
+plt.savefig("build/plotZ.pdf",bbox_inches='tight')
 plt.close()

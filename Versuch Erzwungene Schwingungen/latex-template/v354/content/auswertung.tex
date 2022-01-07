@@ -36,6 +36,13 @@ Hier wird der Widerstand $R_1$ genutzt.
 
 
 
+%\begin{figure}
+%  \centering
+%  \includegraphics{build/plot_abklingdauer.pdf}
+%  \caption{Der Abklingvorgang, theoretisch und experimentiell.}
+%  \label{fig:plot_abklingdauer}
+%\end{figure}
+
 
 
 
@@ -179,3 +186,17 @@ ermitteln.
 
 
 
+    Die Frequenzabhängigkeiten der Kondensatorspannung und Phasenverschiebung ergeben sich 
+    aus der Frequenzabhängigkeit der komplexen Widerstände, aus denen sich die Gesamtimpedanz ergibt. \\
+    \begin{equation*}
+      |Z_{gesamt}| = \sqrt{R^2+ (\omega L - \frac{1}{\omega C})^2}
+    \end{equation*}
+
+    Die Kurve der Impedanz lässt sich wie folgt darstellen.
+
+    \begin{figure}
+      \centering
+      \includegraphics{build/plotZ.pdf}
+      \caption{Die Impedanz $Z$ gegen die Frequenz der Spannung aufgetragen.}
+      \label{fig:plotZ}
+    \end{figure}
