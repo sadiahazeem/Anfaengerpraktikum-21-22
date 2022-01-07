@@ -116,7 +116,7 @@ for x in range(0,len(w)-1):
 
 plt.plot(w,phi,"rx",label="Phasenverschiebung")
 plt.xlabel("$f\;/\;kHz$")
-plt.ylabel("$\Delta \phi \;/\;$rad")
+plt.ylabel("$\phi \;/\;$rad")
 plt.legend(loc="best")
 plt.savefig("build/plotd2.pdf",bbox_inches='tight')
 plt.close()
