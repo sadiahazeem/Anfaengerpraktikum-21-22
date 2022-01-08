@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
-# außerdem (evtl löschen wenn nciht benötigt)
+# außerdem (evtl löschen wenn doch nicht benötigt)
 from scipy import integrate
 import uncertainties.unumpy as unp 
 from uncertainties.unumpy import (nominal_values as noms, std_devs as stds)
@@ -25,7 +25,48 @@ C_e=ufloat(2.06,0.3)*10**(-9)#F
 
 
 
-# 5a, plot zur abklingdauer 
+# 5a, plot zur abklingdauer, aus data3.txt
+
+def funktiona(t,k):
+    return 4*np.exp(-k*t)
+def funktiona_theo(t,k):
+    return 4*np.exp(-k*t)
+
+
+t, UC=np.genfromtxt("data3.txt", delimiter=", ", unpack=True, skip_header=1)
+UC=UC*2 #Volt - Umrechnung da Oszilator auf 2V/Div.
+t=t*20*10**(-6) #s - Umrechnung da Oszillator auf 20us/Div.
+
+#Messwerte plotten
+tp=t*10**6
+plt.plot(tp,UC,"rx",label="Messdaten")
+
+#Messwerte fitten
+line=np.linspace(0,tp[len(tp)-1])
+params, cov= curve_fit(funktiona,tp,UC)
+errors = np.sqrt(np.diag(cov))
+unparams = unp.uarray(params,errors)
+plt.plot(line,funktiona(line,*params),"g",label='Ausgleichs e-Funktion')
+
+werte_params=f"""
+    Berechnete Werte aus Messwert-Fit für Bausteine\\
+    k=R/2L: {unparams[0]}\
+    Tex=1/k {1/unparams[0]}\
+    Reff: {unparams[0]*2*L}\
+    L: {L_e}\\
+    Theorie\
+    k=R/2L: {R1_e/(2*L_e)}\n
+    Rap: {np.sqrt(4*L/C)}                                       
+     """                                                                    #Rap mit fehlern
+print(werte_params)
+
+#Theoriekurve plotten
+plt.plot(tp,funktiona_theo(t,R2/(2*L)),"b--",label="Theoriekurve")
+plt.legend()
+plt.xlabel("$t\;/\;\mu s$")
+plt.ylabel("$U_C\;/\;V$")
+plt.savefig("build/plot_Tex.pdf",bbox_inches='tight')
+plt.close()
 
 
 
@@ -69,9 +110,11 @@ plt.close()
 
 # teilaufgabe c (diagramm u gegen f, linear)
 
+halbwert_Uc = [1.65/np.sqrt(2)]*len(w)
+
 plt.plot(line_w,U_funktion(line_W*6.6),label="Theoriekurve")
 plt.plot(w,U,"r+",label="Messwerte")
-plt.ylabel("$U\;/\;V$")
+plt.plot(w,halbwert_Uc,"y",label="Halbwert") 
 plt.xlabel("$f\,/\,kHz$")
 plt.legend()
 plt.savefig("build/plotc2.pdf",bbox_inches='tight')

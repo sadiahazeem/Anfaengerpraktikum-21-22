@@ -36,13 +36,20 @@ Hier wird der Widerstand $R_1$ genutzt.
 
 
 
-%\begin{figure}
-%  \centering
-%  \includegraphics{build/plot_abklingdauer.pdf}
-%  \caption{Der Abklingvorgang, theoretisch und experimentiell.}
-%  \label{fig:plot_abklingdauer}
-%\end{figure}
+\begin{figure}
+  \centering
+  \includegraphics{build/plot_Tex.pdf}
+  \caption{Der Abklingvorgang, theoretisch und experimentiell, mit e-Funktion als Fit.}
+  \label{fig:plot_abklingdauer}
+\end{figure}
 
+Es ergibt sich aus dem Fit an eine e-Funktion mit der Zeitkonstante $k$
+\begin{align*}
+  k_{experimentiell,fit} = 0.0156 \pm 0.0005 \\
+  T_{Abkling} = 64.1 \pm 2.2 \mu s \\
+  R_{eff} = 0.000526 \pm 0.000018 \Omega 
+\end{align*}
+für Abklingdauer und effektiven Widerstand.
 
 
 
@@ -101,7 +108,7 @@ ermitteln.
 \end{table}
 
 
-% plot 1
+% plot 1, jeweils logarithmisch (in d auch)
 
 \begin{figure}
   \centering
@@ -112,7 +119,7 @@ ermitteln.
 
 
 
-% plot 2
+% plot 2, linear, in d auch
 
 \begin{figure}
   \centering
@@ -120,6 +127,10 @@ ermitteln.
   \caption{Die Frequenzabhängigkeit der Kondensatorspannung $U_C$ linear gegen die Frequenz $f$ aufgetragen.}
   \label{fig:plotc2}
 \end{figure}
+
+Hieraus ergibt sich für die Breite der Resonanzkurve $f_+ - f_- = 6.5 \cdot 10^3 Hz$. \\
+Der experimentielle Wert für die Resonanzüberhöhung $q$ lässt sich also mit Hilfe von $q = \frac{f_0}{f_+ - f_-}$ zu $q = 4$ bestimmen. \\
+% Deren theoretischer Wert liegt bei $q = \frac{1}{\omega_0 R C} = $.  weiß nciht genau wie, kommen nur komische werte raus
 
 
 
