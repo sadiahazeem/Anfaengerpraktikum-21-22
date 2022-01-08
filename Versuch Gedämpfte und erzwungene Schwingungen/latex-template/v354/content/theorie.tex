@@ -14,9 +14,9 @@ Verlauf ab und wird in Wärme umgewandelt, daher handelt es sich um eine gedämp
     \label{abb:GedSchwing}
 \end{figure}
 \noindent Aus \autoref{abb:GedSchwing} folgt nach dem 2.Kirchhoffschen Gesetz
-\begin{equation}
+\begin{equation*}
     0 = U_R + U_C + U_L
-\end{equation}
+\end{equation*}
 für die Spannungen.
 Daraus folgt die Differentialgleichung der gedämpften Schwingung
 \begin{equation*}
@@ -30,19 +30,19 @@ mit der Lösung
 Dabei sind
 \begin{align}
    2\pi\mu &= \frac{R_{Eff}}{2L}\\
-   2\pi\nu &= \sqrt{\frac{1}{LC} - \frac{R^2}{4L^2}}\\
+   2\pi\nu &= \sqrt{\frac{1}{LC} - \frac{R^2}{4L^2}}
 \end{align}
 und $i$ die imaginäre Zahl.
-Dabei wird bei $\nu$ zwischen zwei Spezialfällen unterschieden.\\
+Es wird bei $\nu$ zwischen zwei Spezialfällen unterschieden.\\
 1. Fall: $\nu\in\mathbb{R}$\\
-Dabei folgt für die Lösung der Differentialgleichung
+Hier folgt für die Lösung der Differentialgleichung
 \begin{equation}
     I(t) = A_0e^{-2\pi\mu t}\cos(2\pi\nu t + \eta).
 \end{equation}
 Bei diesem Fall handelt es sich um den Schwingfall wie in \autoref{abb:Schwing} dargestellt und die Abklingdauer beträgt
-\begin{equation*}
+\begin{equation}
     T_{ex} = \frac{R}{4\pi L}.
-\end{equation*}
+\end{equation}
 \begin{figure}[H]
     \centering
     \includegraphics[scale=1]{content/Schwing.png}
@@ -79,7 +79,7 @@ Für die Differentialgleichung mit der Eingangsspannung $U_0$ folgt hier
 mit
 \begin{equation}
     \label{eqn:UC}
-    U_C(\omega) = \frac{U_0}{\sqrt{(1-LC\omega^2)^2 + \omega^2R^2C^2}}.
+    U_C(\omega) = \frac{U_0}{\sqrt{\left(1-LC\omega^2\right)^2 + \omega^2R^2C^2}}.
 \end{equation}
 Für große Frequenzen geht die Spannungsamplitude $U_C$ gegen null und bei kleinen Frequenzen gegen $U_0$.
 Es folgt ebenfalls aus \eqref{eqn:ErzDGL} folgt für die Phase $\varphi$
