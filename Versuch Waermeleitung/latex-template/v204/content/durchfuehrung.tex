@@ -45,12 +45,24 @@ Die Probestäbe haben die in \autoref{fig:Masse} angegebenen Maße und Materiale
     \caption{Eine Abbildung des Xplorer GLX mitsamt der Tastenbeschriftung. \cite{sample}}
     \label{fig:GLX}
 \end{figure}
-\begin{figure}[H]
+\begin{table}[H]
     \centering
-    \includegraphics[scale=0.7]{content/StabDaten.png}
-    \caption{Die Tabelle mit den Maßen und Materialeigenschaften der Probestäbe. \cite{sample}}
+    \caption{Die Tabelle mit den Maßen und Materialeigenschaften der Probestäbe. Quelle:\cite{sample}}
     \label{fig:Masse}
-\end{figure}
+    \begin{tabular}{cccc}
+        \toprule
+        Material&
+        {$\symup{Abmessung}[\symup{cm}]$} &
+        {$\rho \left[\frac{\symup{kg}}{\symup{m}^3}\right]$} &
+        {$c \left[\frac{\symup{J}}{\symup{kg\cdot K}}\right]$} \\
+        \midrule
+        Messing(breit) & 9 x 1.2 x 0.4 & 8520 & 385 \\
+        Messing(schmal) & 9 x 0.7 x 0.4 & 8520 & 385 \\
+        Aluminium(breit) & 9 x 1.2 x 0.4 & 2800 & 830 \\
+        Edelstahl(breit) & 9 x 1.2 x 0.4 & 8000 & 400 \\
+        \bottomrule
+    \end{tabular}
+\end{table}
 \subsection{Aufgaben und Durchführung}
 \label{subsec:AufgDurch}
 Es soll für alle vier Stäbe der gemessene zeitliche Verlauf der Temperaturänderung mit der statischen und
