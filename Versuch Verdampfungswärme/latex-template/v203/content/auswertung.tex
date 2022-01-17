@@ -1,9 +1,14 @@
 \section{Auswertung}
 \label{sec:Auswertung}
 \subsection{Fehlerrechnung}
+Die Fehlerfortpflanzung einer Abgeleiteten Größe $f(x_1,x_2,\ldots,x_n)$ mit den Messunsicherheiten $\symup{\Delta}x_1,\symup{\Delta}x_2,\ldots,\symup{\Delta}x_n$ wird nach Gauß
+\begin{equation*}
+  \symup{\Delta}f = \sqrt{\left(\frac{\partial f}{\partial x_1}\symup{\Delta}x_1\right)^2 + \left(\frac{\partial f}{\partial x_2}\symup{\Delta}x_2\right)^2 + \ldots + \left(\frac{\partial f}{\partial x_n}\symup{\Delta}x_n\right)^2}
+\end{equation*}
+berechnet.
 \subsection{Messung 30-1000 milli Bar}
 \label{subsec:M30-1000}
-Der logarithmus der genommenen Messwerte im Druckbereich von $30-1000\unit{\milli\bar}$ aus \autoref{tab:Tabelle1} werden zunächst in \autoref{fig:M30-1000}
+Der Logarithmus der genommenen Messwerte im Druckbereich von $30-1000\unit{\milli\bar}$ aus \autoref{tab:Tabelle1} werden zunächst in \autoref{fig:M30-1000}
 gegen die reziproke Temperatur aufgetragen und eine Ausgleichsrechnung nach \eqref{} mit
 \begin{equation}
   \ln\left(p\right) = \frac{m}{T} + b_1
