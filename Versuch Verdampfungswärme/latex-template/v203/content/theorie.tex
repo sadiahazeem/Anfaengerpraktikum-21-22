@@ -47,7 +47,12 @@ beschreiben. Hier entspricht R der allgemeinen Gaskonstante $R = 8,134 \frac{J}{
 \subsection{Clausius-Clapeyronsche Gleichung}
 \label{subsec:Clausius-Clapeyron}
 Bei Temperaturen, die weit unterhalb des kritischen Punktes des Stoffes liegen,
-lassen sich einige Näherungen annehmen. \\
+lassen sich für die Clausius-Calpeyronsche Gleichung
+\begin{equation}
+    \label{eqn:Claus}
+    \left(V_D-V_F\right)\symup{dp} = \frac{L}{T}\symup{dT}
+\end{equation}
+einige Näherungen annehmen. \\
 Und zwar:
 
 \begin{enumerate}
@@ -55,3 +60,12 @@ Und zwar:
     \item Das Flüssigkeitsvolumen $V_F$ ist gegenüber dem Dampfvolumen $V_D$ vernachlässigbar
     \item Das Dampfvolumen $V_D$ darf durch die allgemeine Gasgleichung \autoref{eqn:allg_gasgl} beschrieben werden
 \end{enumerate}
+Unter diesen Vorraussetzungen nimmt \eqref{eqn:Claus} die Form
+\begin{equation*}
+    \frac{R}{p}\symup{dp} = \frac{L}{T^2}\symup{dT}
+\end{equation*}
+an und wird diese integriert folgt der Ausdruck
+\begin{equation}
+    \label{eqn:ClausInt}
+    \ln\left(p\right) = -\frac{L}{R}\frac{1}{T} + \symup{const}.
+\end{equation}

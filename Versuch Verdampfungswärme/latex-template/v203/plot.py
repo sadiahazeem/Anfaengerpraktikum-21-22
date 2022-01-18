@@ -41,7 +41,6 @@ plt.xlabel(r'$T^{-1}/\frac{1}{K}$')
 plt.ylabel(r'$\ln(p)$')
 plt.legend(loc='best')
 
-# in matplotlibrc leider (noch) nicht möglich
 plt.tight_layout(pad=0, h_pad=1.08, w_pad=1.08)
 plt.savefig('build/plot.pdf')
 
@@ -65,8 +64,7 @@ plt.xlabel(r'$T/K$')
 plt.ylabel(r'$p/Pa$')
 plt.legend(loc='best')
 
-# in matplotlibrc leider (noch) nicht möglich
-plt.tight_layout(pad=0, h_pad=1.08, w_pad=1.08)
+plt.tight_layout()
 plt.savefig('build/plot2.pdf')
 
 def L1(x,p):
@@ -74,14 +72,13 @@ def L1(x,p):
 
 plt.figure()
 plt.grid(True)
-plt.plot(T, L1(T,P), 'x', label='Messdaten')
+plt.plot(T, L1(T,P), 'x', label=r'$L_+$')
 plt.xlabel(r'$T/K$')
 plt.ylabel(r'$L/\unit{\joule\per\mol}$')
 plt.legend(loc='best')
 
 print(L1(T,P))
 
-# in matplotlibrc leider (noch) nicht möglich
 plt.tight_layout(pad=0, h_pad=1.08, w_pad=1.08)
 plt.savefig('build/plot3.pdf')
 
@@ -90,13 +87,12 @@ def L2(x,p):
 
 plt.figure()
 plt.grid(True)
-plt.plot(T, L2(T,P), 'r-', label='Kurve der Messdaten')
+plt.plot(T, L2(T,P), 'r-', label=r'$L_-$')
 plt.xlabel(r'$T/K$')
 plt.ylabel(r'$L/\unit{\joule\per\mol}$')
 plt.legend(loc='best')
 
 print(L2(T,P))
 
-# in matplotlibrc leider (noch) nicht möglich
 plt.tight_layout(pad=0, h_pad=1.08, w_pad=1.08)
 plt.savefig('build/plot4.pdf')
