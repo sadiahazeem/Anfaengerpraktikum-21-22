@@ -20,12 +20,11 @@ Die Eckdaten des Geräts lauten
 Die Abklingdauer $T$ und der effektive Dämpfungswiderstand $R_{eff}$ können anhand der Zeitabhängigkeit der Kondensatorspannungsamplitude 
 bestimmt werden.\\
 
-Der theoretische Verlauf der Kurve lässt sich mit $u_0 = 4V$ durch 
+\noindent Dazu wird ein Fit nach
 \begin{equation*}
-    u(t) = 4 \cdot e^{-\frac{R}{2 \cdot L \cdot t}} = 4 \cdot e^{- 1,99 \cdot 10^{-3} \cdot t}
+    U(t) = U_0 \cdot e^{-2\pi\mu t}
 \end{equation*}
-berechnen.\\
-Hier wird der Widerstand $R_1$ genutzt. 
+durchgeführt und die Parameter $U_0$ und $\mu$ bestimmt.\\
 
 \begin{figure}[H]
   \centering
@@ -36,31 +35,35 @@ Hier wird der Widerstand $R_1$ genutzt.
 
 
 
-\begin{figure}
+\begin{figure}[H]
   \centering
   \includegraphics{build/plot_Tex.pdf}
-  \caption{Der Abklingvorgang, theoretisch und experimentiell, mit e-Funktion als Fit.}
+  \caption{Der Abklingvorgang mit e-Funktion als Fit.}
   \label{fig:plot_abklingdauer}
 \end{figure}
 
-Es ergibt sich aus dem Fit an eine e-Funktion mit der Zeitkonstante $k$
+\noindent Es ergeben sich aus dem Fit an die e-Funktion die Parameter zu
 \begin{align*}
-  k_{exp} = 0.0156 \pm 0.0005 \\
-  T_{Abkling} = 64.1 \pm 2.2 \mu s \\
-  R_{eff} = 0.000526 \pm 0.000018 \Omega 
+  \mu = (2,4628\pm 0,1236)\cdot 10^3 \symup{s}^{-1} \\
+  U_0 = (3,9721\pm 0,1081)\cdot 10^{-1} \unit{\volt}.
 \end{align*}
-für Abklingdauer und effektiven Widerstand.
-
-
+Nach \eqref{eqn:mu} ergibt sich
+\begin{equation*}
+  R_{eff} = 4\pi\mu L = (522,1005\pm 26,2482)\unit{\ohm}
+\end{equation*}
+für den effektiven Wiederstand und nach \eqref{eqn:TAb} die Abklingdauer zu
+\begin{equation*}
+  T_{ex} = 2\frac{L}{R_{eff}} = (64,6236\pm 3,2489)\unit{\micro\second}.
+\end{equation*}
 
 
 \subsection{Bestimmung des Widerstandes beim aperiodischen Grenzfall}
 \label{R_ap}
 
-Der experimentiell bestimmte Wert für $R_{ap}$, also der Widerstand, ab dem kein Überschwingen mehr passiert, beträgt $R_{ap,exp} = 4,24 \: k\Omega$. \\
+Der experimentiell bestimmte Wert für $R_{ap}$, also der Widerstand, ab dem kein Überschwingen mehr passiert, beträgt $R_{ap,exp} = \SI{4,24}{\kilo\ohm}$. \\
 Ein entsprechender Theoriewert dazu lässt sich mit 
 \begin{equation*}
-  R_{ap,theo} = \sqrt{\frac{4L}{C}} = \sqrt{\frac{4 \cdot 16,87 \cdot 10^{-3}H}{2,060 \cdot 10^{-9}F}} = 5,72 \: k\Omega
+  R_{ap,theo} = \sqrt{\frac{4L}{C}} = \sqrt{\frac{4 \cdot \SI{16,87e-3}{\henry}}{\SI{2,06e-9}{\farad}}} = (5,7234\pm 0,0009)\unit{\kilo\ohm}
 \end{equation*}
 ermitteln.
 
