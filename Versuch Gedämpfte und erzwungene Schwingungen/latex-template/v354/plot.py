@@ -32,15 +32,15 @@ def funktiona(t,k,a):
 
 
 t, UC=np.genfromtxt("data3.txt", delimiter=", ", unpack=True, skip_header=1)
-UC=UC*0.2 #Volt - Umrechnung da Oszilator auf 0.2V/Div.
-t=t*20*10**(-6) #s - Umrechnung da Oszillator auf 20us/Div.
+UC*=0.2 #Volt - Umrechnung da Oszilator auf 0.2V/Div.
+t*=20e-6 #s - Umrechnung da Oszillator auf 20us/Div.
 
 #Messwerte plotten
 plt.plot(t,UC,"rx",label="Messdaten")
 
 #Messwerte fitten
 line=np.linspace(0,t[len(t)-1])
-params, cov= curve_fit(funktiona,t,UC)
+params, cov= curve_fit(funktiona,t,UC,p0=(1000,1))
 plt.plot(line,funktiona(line,*params),"g",label='Ausgleichs e-Funktion')
 
 print(params, np.sqrt(np.diag(cov)), sep='\n')
