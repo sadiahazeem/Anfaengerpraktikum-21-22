@@ -3,12 +3,12 @@
 
 Im folgenden wird mit den Konstanten 
 \begin{align*}
-  h = 4,136 \cdot 10^{-15} \; eVs\\
-  c = 2,99 \cdot 10^8 \; m/s \\
-  d = 201,4 \cdot 10^{-12}\; m \\
+  h &= \SI{4,136e-15}{\electronvolt\second}\\
+  c &= \SI{2,99e8}{\meter\per\second}\\
+  d &= \SI{201,4e-12}{\meter}\\
 \end{align*}
 
-gerechnet. $h$ ist das Planck'sche Wirkungsquantum, $c$ die Lichtgeschwindigkeit,
+\noindent gerechnet. $h$ ist das Planck'sche Wirkungsquantum, $c$ die Lichtgeschwindigkeit,
 $d$ die Gitterkonstante des Lithium-Flourid-Kristalls.\\
 Die Beugungsordnung $n$ beträgt $n = 1$.
 
@@ -22,22 +22,26 @@ Die Beugungsordnung $n$ beträgt $n = 1$.
 In \autoref{fig:emissionssp} ist das Bremsspektrum der Röntgenstrahlung, die auf das Kupfer trifft, zu sehen.\\
 Es wird die Zählrate $N$ der Impulse pro Sekunde gegen die Wellenlänge $\lambda$ in Metern aufgetragen.\\
 
-\begin{figure}
+\begin{figure}[H]
   \centering
   \includegraphics{build/emissionsspektrum.pdf}
   \caption{Das Emissionsspektrum von Kupfer mit gekennzeichneten Peaks. Der erste Peak stellt $K_{\beta}$ dar, der zweite $K_{\alpha}$.}
   \label{fig:emissionssp}
 \end{figure}
 
-Es sind die Peaks $K_{\alpha}$ und $K_{\beta}$ bei den Winkeln $\alpha(K_{\alpha})= 22,5°$ 
-und $\alpha(K_{\beta}) = 20,02°$ zu erkennen.\\
+\noindent Es sind die Peaks $K_{\alpha}$ und $K_{\beta}$ bei den Winkeln $\alpha(K_{\alpha})= \SI{22,5}{\degree}$ 
+und $\alpha(K_{\beta}) = \SI{20,02}{\degree}$ zu erkennen.\\
 
-Mit Hilfe der Formel ----- lassen sich die zu den Peaks gehörigen Energien
+\noindent Mit Hilfe der Formel
+\begin{equation*}
+  E = \frac{hc}{2d\sin\left(\alpha\right)}
+\end{equation*}
+nach \eqref{eqn:EHF} und \eqref{eqn:Bragg} lassen sich die zu den Peaks gehörigen Energien zu
 \begin{align*}
-  E(K_{\alpha}) = (8043 \pm 34) eV \\
-  E(K_{\beta}) = (8910 \pm 40) eV
+  E(K_{\alpha}) &= (8043 \pm 34)\unit{\electronvolt} \\
+  E(K_{\beta}) &= (8910 \pm 40)\unit{\electronvolt}
 \end{align*}
-
+bestimmen.
 
 
 
@@ -48,22 +52,22 @@ Mit Hilfe der Formel ----- lassen sich die zu den Peaks gehörigen Energien
 Die Funktion der Transmisson $T(\lambda)$ beschreibt die Transmission der 
 Röntgenstrahlung durch die Aluminiumplatte des Aufbaus in Abhängigkeit von der Wellenlänge.\\
 
-Es wird die Totzeit $\tau$ des Geiger-Müller-Zählrohrs als $\tau = 90 \cdot 10^{-6}$ angenommen. Die 
-Integrationszeit der einzelnen Messungen lautet $t = 200s$. \\
+\noindent Es wird die Totzeit $\tau$ des Geiger-Müller-Zählrohrs als $\tau = \SI{90}{\micro\second}$ angenommen. Die 
+Integrationszeit der einzelnen Messungen lautet $t = \SI{200}{\second}$. \\
 Es gilt der Fehler $\Delta N = \frac{\sqrt{N \cdot t}}{t}$.\\
 
 
-\begin{figure}
+\begin{figure}[H]
   \centering
   \includegraphics{build/transmission.pdf}
   \caption{Die Transmission $T$ in Abhängigkeit der Wellenlänge $\lambda$ mit linearer Ausgleichsgeraden.}
   \label{fig:transm}
 \end{figure}
 
-Die Ausgleichsgerade in \autoref{fig:transm} hat eine Gleichung der Form $T(\lambda) = a \cdot \lambda + b$ mit 
-den Parametern $a = (-1,519 \pm 0,024)\cdot 10^{10} m^{-1}$ und $b = 1,225 \pm 0,014$.
+\noindent Die Ausgleichsgerade in \autoref{fig:transm} hat eine Gleichung der Form $T(\lambda) = a \cdot \lambda + b$ mit 
+den Parametern $a = (-1,519 \pm 0,024)\cdot 10^{10}\symup{m}^{-1}$ und $b = 1,225 \pm 0,014$.
 
-\begin{figure}
+\begin{figure}[H]
   \centering
   \includegraphics{build/transmission2.pdf}
   \caption{Die Transmission $T$ in Abhängigkeit der Wellenlänge $\lambda$ mit linearer Ausgleichsgeraden und Fehlerbalken.}
@@ -77,12 +81,12 @@ den Parametern $a = (-1,519 \pm 0,024)\cdot 10^{10} m^{-1}$ und $b = 1,225 \pm 0
 
 Die Intensität $I_0 = 2731 \pm 50$ wird ohne Absorber, $I_1 = 1180 \pm 34$ und $I_2 = 1024 \pm 32$ mit Aluminiumabsorber zwischen Röntgenröhre
 und Plexiglas-Streuer bzw. zwischen Plexiglas-Streuer und Geiger-Müller-Zählrohr gemessen.\\
-Die dazugehörige Integrationszeit beträgt $t = 300s$.\\
+Die dazugehörige Integrationszeit beträgt $t = \SI{300}{\second}$.\\
 
-Aus den Intensitäten lassen sich die Transmissionen der Aufbauten mit $-----$ berechnen. \\
+\noindent Aus den Intensitäten lassen sich die Transmissionen der Aufbauten mit $T_1 = \frac{I_1}{I_0}$ und $T_2 = \frac{I_2}{I_0}$ berechnen. \\
 Diese ergeben sich zu $T_1 = 0,423 \pm 0,015$ und $T_2 = 0,375 \pm 0,014$.\\
 
-Schleißlich wird die Compton-Wellenlängen $\lambda_C$ aus den Transmissionen und den Parametern der Ausgleichsgerade 
+\noindent Schleißlich wird die Compton-Wellenlängen $\lambda_C$ aus den Transmissionen und den Parametern der Ausgleichsgerade 
 in \autoref{fig:transm} bestimmt. \\
 Mit 
 \begin{align*}
@@ -90,7 +94,7 @@ Mit
 \end{align*}
 ergeben sich
 \begin{align*}
-  \lambda_1 = (52,2 \pm 1,6) \cdot 10^{-12}m \\
-  \lambda_2 = (55,9 \pm 1,6) \cdot 10^{-12}m,
+  \lambda_1 &= (52,2 \pm 1,6) \cdot 10^{-12}\unit{\meter} \\
+  \lambda_2 &= (55,9 \pm 1,6) \cdot 10^{-12}\unit{\meter},
 \end{align*}
-sodass die Compton-Wellenlänge sich auf $\lambda_C = \lambda_2 - \lambda_1 = (3,8 \pm 1,1) \cdot 10^{-12}m$ beläuft.\\
+sodass die Compton-Wellenlänge sich auf $\lambda_C = \lambda_2 - \lambda_1 = (3,8 \pm 1,1) \cdot 10^{-12}\unit{\meter}$ beläuft.\\
