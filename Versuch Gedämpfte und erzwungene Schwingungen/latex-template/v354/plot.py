@@ -61,7 +61,7 @@ werte_params=f"""
 print(werte_params)
 
 #Theoriekurve plotten
-plt.plot(tp,funktiona_theo(t,R2/(2*L)),"b--",label="Theoriekurve")
+#plt.plot(tp,funktiona_theo(t,R2/(2*L)),"b--",label="Theoriekurve")
 plt.legend()
 plt.xlabel("$t\;/\;\mu s$")
 plt.ylabel("$U_C\;/\;V$")
@@ -100,7 +100,9 @@ lnU_theorie = np.log(U_fkt) # war jz unnötig, man hätte den ln direkt oben in 
 
 plt.plot(line_w, lnU_theorie,label="Theoriekurve")
 plt.plot(w,lnU,"r+",label="Messwerte")
-plt.ylabel("$ln(U_C/U_0)\;/\;V$")
+plt.axvline(x=23)    
+plt.axvline(x=29.5)                                 # korrektur
+plt.ylabel("$ln(U_C/U_0)\;/\;V$")                                
 plt.xlabel("$f\,/\,kHz$")
 plt.legend()
 plt.savefig("build/plotc.pdf",bbox_inches='tight')
@@ -166,3 +168,8 @@ plt.xlabel("$f\,/\,kHz$")
 plt.legend()
 plt.savefig("build/plotZ.pdf",bbox_inches='tight')
 plt.close()
+
+
+
+
+# senkrechte Linie mit plt.axvline(x=5, ymin=0.1, ymax=0.9)
