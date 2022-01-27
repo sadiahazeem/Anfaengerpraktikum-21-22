@@ -113,10 +113,17 @@ plt.close()
 # teilaufgabe c (diagramm u gegen f, linear)
 
 halbwert_Uc = [1.65/np.sqrt(2)]*len(w)
+line_w=np.linspace(20,36)
+line_W=line_w*1000
+                       # 20 bis 36
+w,U=np.genfromtxt("data2.2.txt", delimiter=", ", unpack=True, skip_header=1)
+halbwert_Uc = [1.65/np.sqrt(2)]*len(w)
 
 plt.plot(line_w,U_funktion(line_W*6.6),label="Theoriekurve")
 plt.plot(w,U,"r+",label="Messwerte")
-plt.plot(w,halbwert_Uc,"y",label="Halbwert") 
+plt.axvline(x=23)    
+plt.axvline(x=29.5) 
+#plt.plot(w,halbwert_Uc,"y",label="Halbwert") 
 plt.xlabel("$f\,/\,kHz$")
 plt.legend()
 plt.savefig("build/plotc2.pdf",bbox_inches='tight')
@@ -134,7 +141,7 @@ plt.close()
 
 w,a,b=np.genfromtxt("data1.txt", delimiter=", ", unpack=True, skip_header=1)
 phi=a/b*np.pi
-print("w    &   a   &   b   &   phi")  # hinter phi \n weggemacht
+print("w   &   a   &   b   &   phi")  # hinter phi \n weggemacht
 for x in range(0,len(w)-1):
     print(f"{w[x]} & {a[x]} & {b[x]} & {phi[x].round(2)} \\\\")
 
@@ -160,14 +167,14 @@ plt.legend(loc="best")
 plt.savefig("build/plotd2.pdf",bbox_inches='tight')
 plt.close()
 
-line_w= np.linspace(5,60)
-line_W=line_w*1000
-plt.plot(line_w,np.sqrt(R2**2+(line_W*L-1/(line_W*C))**2),"r-",label="Impedanz")
-plt.ylabel("$Z\;/\;$Ohm")
-plt.xlabel("$f\,/\,kHz$")
-plt.legend()
-plt.savefig("build/plotZ.pdf",bbox_inches='tight')
-plt.close()
+#line_w= np.linspace(5,60)      # nicht benötigt
+#line_W=line_w*1000
+#plt.plot(line_w,np.sqrt(R2**2+(line_W*L-1/(line_W*C))**2),"r-",label="Impedanz")
+#plt.ylabel("$Z\;/\;$Ohm")
+#plt.xlabel("$f\,/\,kHz$")
+#plt.legend()
+#plt.savefig("build/plotZ.pdf",bbox_inches='tight')
+#plt.close()
 
 
 
