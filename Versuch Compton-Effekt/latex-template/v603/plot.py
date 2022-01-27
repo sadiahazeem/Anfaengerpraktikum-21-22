@@ -97,10 +97,31 @@ t_0  , N_0  = np.genfromtxt('ComptonOhne.txt', unpack=True)
 lamd = 2 * d * np.sin(t_0 * np.pi / 180)
 # lamd = lam(t_0)
 
+def f(x):
+    return x/(1-90e-6*x)
+
+#print(f(N_0))
+#print(f(N_al))
+
 #Poisson-Fehler auf Anzahl setzten 
 t = 200 #second
 N0_err = np.sqrt(N_0 /t)
 Nal_err =np.sqrt(N_al /t)
+
+def g(x):
+    return (1/(90e-6*x-1)**2 * N0_err)
+
+def h(x):
+    return (1/(90e-6*x-1)**2 * Nal_err)
+
+#print(g(N_0))
+#print(h(N_al))
+
+#print(f(N_al)/f(N_0))
+
+T_err=np.sqrt((1/f(N_0) * h(N_al))**2 + (f(N_al)/(f(N_0))**2 * g(N_0))**2)
+
+#print(T_err)
 
 #ufloats
 N0 = unp.uarray(N_0, N0_err)
@@ -125,9 +146,8 @@ lamd_stop = lam(10)
 lamd_plot = np.linspace(lamd_start, lamd_stop, 1000)
 
 plt.figure()
-plt.plot(lamd ,unp.nominal_values(T), 'r.', label="Messwerte")
 plt.plot(lamd_plot, params1[0]*lamd_plot + params1[1], 'b-', label='Lineare Regression')
-plt.errorbar(lamd , unp.nominal_values(T), yerr=unp.std_devs(T), fmt='r_')
+plt.errorbar(lamd , unp.nominal_values(T), yerr=T_err, fmt='r_', label='Messwerte mit Fehler')
 plt.grid()
 plt.legend()
 plt.xlabel(r'Wellenlänge $\lambda \, \mathbin{/} \si{\metre}$')
