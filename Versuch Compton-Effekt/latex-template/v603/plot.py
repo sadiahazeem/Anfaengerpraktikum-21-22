@@ -121,7 +121,7 @@ def h(x):
 
 T_err=np.sqrt((1/f(N_0) * h(N_al))**2 + (f(N_al)/(f(N_0))**2 * g(N_0))**2)
 
-#print(T_err)
+print(T_err)
 
 #ufloats
 N0 = unp.uarray(N_0, N0_err)

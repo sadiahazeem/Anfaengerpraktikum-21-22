@@ -39,15 +39,14 @@ Röntgenstrahlung durch die Aluminiumplatte des Aufbaus in Abhängigkeit von der
 
 \noindent Es wird die Totzeit $\tau$ des Geiger-Müller-Zählrohrs als $\tau = \SI{90}{\micro\second}$ angenommen. Die 
 Integrationszeit der einzelnen Messungen lautet $t = \SI{200}{\second}$. \\
-Es gilt der Fehler $\Delta N = \frac{\sqrt{N \cdot t}}{t}$.\\
 Die Wellenlängen $\lambda$ werden nach Gl.\eqref{eqn:Bragg} mit $n=1$, $d=d_{LiF}$ und den Winkeln $\alpha$ aus \autoref{tab:Tabelle1} bestimmt.
 Die korrigierten Zählraten $I$ werden nach
 \begin{equation*}
   I = \frac{N}{1-\tau N}
 \end{equation*}
-bestimmt und deren Fehler ergibt sich mit dem Fehler der Zählraten $\symup{\Delta}N = \sqrt{N\cdot t}$ nach Gaußscher-Fehlerfortpflanzung zu
+bestimmt und deren Fehler ergibt sich mit dem Fehler der Zählraten $\symup{\Delta}N = \sqrt{N}$ nach Gaußscher-Fehlerfortpflanzung zu
 \begin{equation*}
-  \symup{\Delta}I = \frac{N}{1-\SI{90e-6}{\second}\cdot N}\cdot \symup{\Delta}N.
+  \symup{\Delta}I = \frac{\symup{\Delta}N}{\left(\SI{90e-6}{\second}\cdot N-1\right)^2}.
 \end{equation*}
 Der Fehler der Transmisson $T = \frac{I_{Al}}{I_0}$ wird nach
 \begin{equation*}
