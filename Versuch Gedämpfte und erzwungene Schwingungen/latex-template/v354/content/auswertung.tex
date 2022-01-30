@@ -3,17 +3,17 @@
 
 Die Eckdaten des Geräts lauten 
 \begin{align*}
-  R_1 = 67,2 \pm 0,1 \Omega \\
-  R_2 = 682 \pm 0,5 \Omega \\
-  L = (16,87 \pm 0,05) \cdot 10^{-3}H \\
-  C = (2,060 \pm 0,003) \cdot 10^{-9}F.   % ------- 10^-9 oder doch 10^-3? es passt besser -9 weil sonst R_ap komisch wäre 
+  R_1 = (67,2 \pm 0,1) \mathrm{\Omega} \\
+  R_2 = (682 \pm 0,5) \mathrm{\Omega} \\
+  L = (16,87 \pm 0,05) \cdot 10^{-3}\mathrm{H} \\
+  C = (2,060 \pm 0,003) \cdot 10^{-9}\mathrm{F}.   % ------- 10^-9 oder doch 10^-3? es passt besser -9 weil sonst R_ap komisch wäre 
 \end{align*}
 
 
 Somit ergeben sich die Theoriewerte 
 \begin{align*}
-  k_{theo} = \frac{R}{2 \cdot L} = 1991,70 \mathrm{s^{-1}} \\
-  T_{ex} = \frac{R}{4 \pi \cdot L} = 316,99 \mathrm{s} \\  % evtl nochb R_eff ergänzen? keine formel gefunden
+  k_{theo} = \frac{R}{2 \cdot L} = 1991,70 \mu \mathrm{(s)^{-1}} \\
+  T_{ex} = \frac{R}{4 \pi \cdot L} = 316,99 \mu s\mathrm{\mu s} \\  % evtl nochb R_eff ergänzen? keine formel gefunden
 \end{align*}
 
 
@@ -28,13 +28,13 @@ Bei folgenden Berechnungen werden Mittelwerte mit
 \end{center}
 
 bestimmt. \\
-Der Abweichung des Mittelwertes kann dann durch
+Die Abweichung des Mittelwertes kann dann durch
 \begin{center}
   \begin{equation}
     \sigma=\sqrt{\dfrac{1}{N(N-1)}\sum\limits_{n=1}^{N} (x_n - \mu)^2}
   \end{equation}
 \end{center}
-ermittelt werden. 
+ermittelt werden.\\
 Die Gauß'sche Fehlerfortpflanzung
 \begin{center}
   \begin{equation}
@@ -166,7 +166,8 @@ ermitteln.
   \label{fig:plotc2}
 \end{figure}
 
-Mit \autoref{eq:gl11} ergibt sich durch für die Breite der Resonanzkurve $f_+ - f_- = 6.5 \cdot 10^3 Hz$. \\
+Der Theoriewert für die Breite $f_+-f_-$ der Resonanzkurve ergibt sich zu $\frac{R_2}{L} = (6,43 \pm 0.005)\mathrm{kHz}$.\\ 
+Mit \autoref{eq:gl11} ergibt sich durch für die experimentiell bestimmte Breite der Resonanzkurve $f_+ - f_- = 6.5 \cdot 10^3 Hz$. \\
 Die Frequenzen $f_0$, $f_+$ und $f_-$ betragen $f_0 = 26$ kHz, $f_+ = 29,5$ kHz und $f_- = 23$ kHz. \\
 Der experimentielle Wert für die Resonanzüberhöhung $q$ lässt sich also mit Hilfe von $q = \frac{f_0}{f_+ - f_-}$ zu $q = 4$ bestimmen. \\
 % Deren theoretischer Wert liegt bei $q = \frac{1}{\omega_0 R C} = $.  weiß nciht genau wie, kommen nur komische werte raus
